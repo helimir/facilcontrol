@@ -293,7 +293,7 @@ $year=date('Y');
 
 ?>
 
-<?php $useragent = $_SERVER['HTTP_USER_AGENT'];
+<?php $useragent = $_SERVER['HTTP_USER_AGENT'] ?? '';
     if (preg_match("/mobile/i", $useragent) ) { ?>
          <a title="Soporte Tecnico FacilControl" href="https://api.whatsapp.com/send?phone=56936450940&text=Hola, soporte ayuda sobre," class="whatsapp" target="_blank"><i style="color: #FFFFFF;" class="fa fa-whatsapp whatsapp-icon"></i></span></a>
        <!--<a href="https://clubi.cl/tienda/" class="floatm2" target="_blank"><span style="font-size: 15px;color: #fff !important;"><i class="fa fa-shopping-bag my-floatm2"></i></span></a>
