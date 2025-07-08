@@ -111,6 +111,24 @@ $result_config=mysqli_fetch_array($query_config);
     margin-top:13px;
     }
 
+
+    .password-container input {
+      width: 100%;
+      padding: 10px 40px 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 20px;
+      top: 59%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #666;
+    }
+
+
 </style>
    
 <script>
@@ -272,6 +290,19 @@ function clean (rut) {
     : ''
 }
 
+function togglePassword() {
+            const passwordInput = document.getElementById('pass');
+            const toggleIcon = document.querySelector('.toggle-password i');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.replace('fa-eye', 'fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.replace('fa-eye-slash', 'fa-eye');
+            }
+        }
+
+       
                            
 
 </script>       
@@ -318,8 +349,11 @@ $year=date('Y');
                 <div class="form-group">
                     <input type="text" name="rut" id="rut" class="form-control" placeholder="RUT" maxlength="12" oninput="checkRut(this)"  required="" autocomplete="off" />
                 </div>
-                <div class="form-group">
+                <div class="form-group password-container">
                     <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required="" autocomplete="off" />
+                    <span class="toggle-password" aria-label="Mostrar contraseña" onclick="togglePassword()">
+                        <i style="font-size:16px" class="fa fa-eye"></i>
+                    </span>
                 </div>
                 <button style="font-weight:700;font-size:14px" type="button" name="ingresar" id="ingresar" class="btn btn-success block full-width m-b" onclick="login()">INGRESO</button>
                 
