@@ -1,11 +1,10 @@
 <?php
 /**
  * @author helimirlopez
- * @copyright 2021
+ * @copyright 20224
  */
 session_start();
-if (isset($_SESSION['usuario']))  {
-    
+if (isset($_SESSION['usuario']))  {    
 include('config/config.php');
 $regiones=mysqli_query($con,"Select * from regiones ");
 
