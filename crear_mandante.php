@@ -280,7 +280,7 @@ function validar_rep(rut_rep) {
       
             <div style="" class="row wrapper white-bg ">
                 <div class="col-lg-10">
-                    <h2 style="color: #010829;font-weight: bold;">Crear Nuevo Mandante</h2>
+                    <h2 style="color: #010829;font-weight: bold;">Crear Mandante</h2>
                 </div>
             </div>
         
