@@ -1,0 +1,8 @@
+[23-Feb-2025 00:26:44 America/Santiago] PHP Warning:  Undefined array key "status" in /home2/clubicl/facilcontrol.cl/flowprueba/suscripcion_backend.php on line 6
+[23-Feb-2025 00:27:01 America/Santiago] PHP Warning:  Undefined array key "status" in /home2/clubicl/facilcontrol.cl/flowprueba/suscripcion_backend.php on line 6
+[23-Feb-2025 01:11:55 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 6
+[23-Feb-2025 01:13:15 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 6
+[23-Feb-2025 01:17:27 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 5
+[23-Feb-2025 01:19:13 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 5
+[23-Feb-2025 01:39:55 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 5
+[23-Feb-2025 01:41:09 America/Santiago] PHP Warning:  Undefined array key "payment_token" in /home2/clubicl/facilcontrol.cl/flowprueba/procesar.php on line 5

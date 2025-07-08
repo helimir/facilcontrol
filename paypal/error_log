@@ -1,0 +1,4 @@
+[14-Feb-2025 04:21:29 America/Santiago] PHP Fatal error:  Uncaught Error: Class "PayPalCheckoutSdk\Core\SandboxEnvironment" not found in /home2/clubicl/facilcontrol.cl/paypal/create_subscription.php:15
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/paypal/create_subscription.php on line 15

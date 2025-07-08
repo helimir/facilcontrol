@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gp Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+
+.floatm1 {   
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:35%;
+        right:0%;
+        background:#25d366;
+        color:#FFFFFF !important;
+        border-radius:0px;
+        text-align:center;
+        font-size:30px;
+        /**box-shadow: 2px 2px 3px #999;**/
+        z-index:100;
+    };
+    .my-floatm1{
+        margin-top:12px;
+    };
+
+    .float {   
+        position:fixed;
+        width:140px;
+        height:40px;
+        bottom:20%;
+        right:0%;
+        background:#25d366;
+        color:#FFFFFF !important;
+        text-align:right;
+        font-size:15px;
+        padding-right: 1%;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        /**box-shadow: 2px 2px 3px #999;**/
+        z-index:100;
+    };
+    
+    .my-float{
+        margin-top:14px;
+    }
+
+    .whatsapp {
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:45px;
+    right:30px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+    }
+
+    .whatsapp-icon {
+    margin-top:13px;
+    }
+
+  </style>
+
+</head>
+
+<?php $useragent = $_SERVER['HTTP_USER_AGENT'];
+    if (preg_match("/mobile/i", $useragent) ) { ?>
+         <a title="Soporte Tecnico FacilControl" href="https://api.whatsapp.com/send?phone=56936450940&text=Hola, soporte ayuda sobre," class="whatsapp" target="_blank"><i style="color: #FFFFFF;" class="fa fa-whatsapp"></i></span></a>
+        
+	<?php } else {  ?>       
+       <a title="Soporte Tecnico FacilControl" href="https://web.whatsapp.com/send?phone=56936450940&text=Hola, necesito soporte sobre," class="whatsapp" target="_blank" title="Consulte cualquier duda via whatsapp"><img src="assets/img/ws.png" class="img-fluid"></a>
+<?php }   ?>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      
+     <!--<h1 class="logo me-auto me-lg-0"><a href="index.html">Gp<span>.</span></a></h1>-->
+     <a href="index.html" class="logo me-auto me-lg-0"><img   src="assets/img/logo_2.png" alt="" class="img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#acerca">Acerca De</a></li>
+          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
+          <li><a class="nav-link scrollto " href="#beneficios">Beneficios</a></li>
+          <li><a class="nav-link scrollto " href="#precios">Precios</a></li> 
+          <!--<li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+            </ul>
+          </li>-->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#contact" class="get-started-btn scrollto">Contacto</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-7 col-lg-9">
+          <h1>Gestor de documentación<span>.</span></h1>
+          <h2>El Software que toda Contratista necesita.</h2>
+        </div>
+      </div>
+
+      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-store-line"></i>
+            <h3><a href="#acerca">FacilControl</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line"></i>
+            <h3><a href="#services">Servicios</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="fa fa-list" aria-hidden="true"></i>
+            <h3><a href="#beneficios">Beneficios</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line"></i>
+            <h3><a href="#precios">Precios</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+            <h3><a href="#contact">Contacto</a></h3>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="acerca" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/acerca1.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+            <h3>Acerca de FacilControl.</h3>
+            
+            <ul>
+              <li><i class="ri-check-double-line"></i><strong>FacilControl</strong> es una <strong>Software</strong> que permite que todo tamaño de empresas pueda incorporar herramientas de <strong>gestión de prevención de riesgos</strong> que hasta ahora estaban disponibles solo para la gran industria.</li>
+              <li><i class="ri-check-double-line"></i><strong>FacilControl</strong> permite la <strong>creación de credenciales</strong> para todo trabajador que deba ingresas a tu obra, instalaciones o campo. Estas credenciales son verificables on line y garantizan que el trabajador tiene toda la documentación se seguridad al día.</li>
+            </ul>
+            <div class="text-center"><a href="#contact" class="get-started-btn scrollto text-dark"><strong>Contacto FacilControl</strong></a>
+            </div>
+            <!--<a class="cta-btn" href="#">Call To Action</a>-->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======= About Section ======= -->
+    <section style="margin-top: -4%;" id="legal" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+          <div class="image col-lg-6"  data-aos="fade-right"><img src="assets/img/ley20123.png" class="img-fluid" alt=""></div>
+          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-left" data-aos-delay="100">
+            <h3>Fundamentos Legales.</h3>
+            <br>
+            <p>
+                La <a href="https://www.bcn.cl/leychile/navegar?idNorma=254080" target="_blank">Ley 20.123</a> es la que regula la subcontratación en Chile. <strong>Esta <a href="https://www.bcn.cl/leychile/navegar?idNorma=254080" target="_blank">Ley</a> hace responsable de forma subsidiaria a la empresa mandante
+                aunque el trabajador esté contratado por otra razón social</strong> si es que está presta servicios en tus instalaciones. Esta <strong><a href="https://www.bcn.cl/leychile/navegar?idNorma=254080" target="_blank">Ley</a></strong> faculta al mandante para solcitar y verificar si un trabajador cuenta con toda
+                la documentación en regla y faculta para retener estados de pagos si es que el contratista no está cumpliendo sus obligaciones.
+
+            </p>
+            <div class="text-center"><a href="#contact" class="get-started-btn scrollto text-dark"><strong>Contacto FacilControl</strong></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+     <!-- ======= About Section ======= -->
+     <section style="margin-top: -4%;" id="services" class="about">
+     
+      <div style="background:#F2F4F7;padding: 3%;" class="container" data-aos="fade-up">    
+        <div style="" class="row">
+          <div class="section-title">
+            <h2>Servicios</h2>
+            <p >Servicios FacilControl</p>
+          </div>        
+        <div style="background-color: #0F316F;color:#fff;padding: 2%;border-radius: 6px;" class="row">
+            <!--<div style="background-image: url('assets/img/facil-1.png');background-repeat: no-repeat;" class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">-->
+           <div class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">  
+            <img src="assets/img/velo1.png" class="img-fluid" alt="">
+          </div>
+          <div  class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p><strong>FacilControl</strong> agiliaza la gestión entre la empresa mandante ys sus contratistas de solicitud y <strong>entrega de documentación laboral</strong>. <strong>FacilControl</strong> 
+            gestiona la documentación ya sea de la empresa contratista o de los trabajadores. Es así que <strong>FacilControl</strong> acredita empresas de servicios y a sus trabajadores dejando respaldos con 100% de trazabiliadad.</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2%;background-color: #0F316F;color:#fff;padding: 2%;border-radius: 6px;" class="row">
+          <div  class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/facil-23.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p><strong>FacilControl</strong> estandariza y <strong>garantiza la entrega de los documentos</strong> que se solicitan a las empresas contratistas. Ademas <strong>se pueden crear perfiles
+               de cargos según riesgo</strong> o exposición para que así las empresas mandantes queden 100% cubiertos en caso de una accidente o contigencia laboral.<br>&nbsp;</p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2%;background-color: #0F316F;padding: 2%;color:#fff;border-radius: 6px;" class="row">
+          <div  class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/facil-2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p>
+              Al momento de ocurrir un accidente o una denuncia a la dirección del trabajo todo el mundo corre para juntar documentación para no sufrir multas por incumplimientos. <strong>FacilControl garantiza el orden y respaldo de la documentación</strong>
+              mediante sus sistema de generación de respald y creación de credenciales de acreditación.
+            </p>
+          </div>
+        </div>
+
+        <div style="margin-top: 2%;background-color: #0F316F;padding: 2%;color:#fff;border-radius: 6px;" class="row">
+          <div  class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/facil4.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p><strong>FacilControl permite a la empresas contratistas ordenar toda la documentación legal y de seguridad de sus trabajadores</strong>. Esto le permite a la empresa de servicios acceder más fácil a nuevos clientes
+              facilitando la gestión y entrega de los antecedentes reuqeridos por las empresas mandantes. <strong>FacilControl acerca a la empresa a una software que hasta ahora estaba disponible para grandes empresas.</strong>
+            </p>
+          </div>
+        </div>
+        
+        </div>
+        <br>
+        <div class="text-center"><a href="#contact" class="get-started-btn scrollto text-dark"><strong>Contacto FacilControl</strong></a>
+      </div>
+    </section>
+
+    
+    <!-- ======= Services Section ======= -->
+    <section style="margin-top: -4%;" id="beneficios" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Beneficios</h2>
+          <p >Beneficios FacilControl</p>
+        </div> 
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+            <div style="background: #0F316F;color:#fff" class="icon-box">
+              <div class=""><img src="assets/img/mandante3.png" class="img-fluid" alt=""> </div>
+              <h1><br>Mandante</h1>
+              <ul style="list-style: none;text-align: left;color:#fff" >
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Estandariza perfiles de control por cargos.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Control de acceso solo para personal autorizado.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Creación de credenciales digitales.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Trazabilidad de la información.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Respaldo seguro de la documentacion.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Agilizar la gestipon de la documentación.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> No tiene costo (gratis).<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Libre de costo de almacenamiento por (2) años.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
+            <div style="background: #0F316F;color:#fff" class="icon-box">
+              <div class=""><img src="assets/img/contratista.png" class="img-fluid" alt=""> </div>
+              <h1><br>Contratista</h1>
+              <ul style="list-style: none;text-align: left;color:#fff" >
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Ordena la documentacion laboral/seguridad.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Agiliza el proceso de acreditación.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Disminuye los costos administrativos.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Trazabilidad de la información.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Respaldo seguro de la documentacion.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Pago según uso real.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Mejora la comunicacipon potencial de nuevos clientes.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Libre de costo de almacenamiento por (2) años.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
+            <div style="background:#0F316F;color:#fff" class="icon-box">
+              <div class=""><img src="assets/img/prevencionista2.png" class="img-fluid" alt=""> </div>
+              <h1><br>Prevencionista</h1>
+              <ul style="list-style: none;text-align: left;color:#fff" >
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Orden estandarizado de todos sus clientes.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Ordena la documentacion laboral/seguridad de cada cliente.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Agiliza el proceso de acreditación de los clientes.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Respaldo seguro de la documentacion.<br>&nbsp;</li>
+                <li><i class="fa fa-chevron-right" aria-hidden="true"></i> Permite la trazabilidad de la información.<br>&nbsp;</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= About Section ======= -->
+    <section style="margin-top: -4%;" id="" class="about">
+     
+      <div style="background:#F2F4F7;padding: 3%;" class="container" data-aos="fade-up">    
+        <div style="" class="row">
+                 
+        <div style="background-color: #fff;color:#000;padding: 2%;border-radius: 6px;" class="row">
+           <div class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">  
+            <img src="assets/img/ante1.png" class="img-fluid" alt="">
+          </div>
+          <div  class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p>
+              En la actualidad toda la gran industria cuenta con software que les ayudan a manejar el gran volumen de <strong>documentación que se genera por cada trabajador</strong> que ingresa a sus instalaciones. 
+              Estas empresas cuentan con servicios especializados que les llevan el proceso de acreditación para que un trabajador pueda ingresar a sus obras o faenas. <strong>FacilControl</strong> entrega a la pequeña 
+              y mediana empresa una herramienta informática que antes estaba disponible solo para empresas con un gran volumen de trabajadores.
+            </p>
+          </div>
+        </div>
+
+        <div style="background-color: #fff;color:#000;padding: 2%;border-radius: 6px;margin-top: 2%;" class="row">
+          <div  class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/ante2.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p>
+              <strong>Si un trabajador tiene un accidente</strong> o cualquier problema laboral, es el dueño de las obras, instalaciones o campo el que debe responder si es que la empresa contratista no tiene los 
+              recursos para hacerlo. <strong>FacilControl</strong> es una herramienta de <strong>acreditación de trabajadores que garantiza a las empresas que una persona se encuentra con toda su documentación de respaldo al día</strong> antes del ingreso a tus instalaciones.
+            </p>
+          </div>
+        </div>
+
+        <div style="background-color: #fff;color:#000;padding: 2%;border-radius: 6px;margin-top: 2%;" class="row">
+          <div  class="col-lg-2 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <img src="assets/img/ante3.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-10 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
+            <p>
+              Las empresas contratistas son una herramienta que permite contar con mano de obra especializada de forma ágil y rápida. Sin embargo una contratista no necesariamente es una empresa ordenada y 
+              prolija en cuanto a la gestión de los documentos de respaldo. <strong>FacilControl es un software que ordena a la empresas contratistas</strong> y permite que una mandante se asegure que no ingrese 
+              personal no acreditado a sus instalaciones.
+            </p>
+          </div>
+        </div>
+        
+        </div>
+        <br>
+        <div class="text-center"><a href="#contact" class="get-started-btn scrollto text-dark"><strong>Contacto FacilControl</strong></a>
+      </div>
+    </section>
+
+     <!-- ======= Features Section ======= -->
+     <section id="precios" class="features">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Precios</h2>
+          <p>Tabla de Acreditaciones</p>
+        </div>
+        <div class="row">
+          <div class="image col-lg-6"  data-aos="fade-right">
+            <img src="assets/img/tabla.png" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-receipt"></i>
+              <h4>Costo según acreditaciones vigentes.</h4>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-cube-alt"></i>
+              <h4>Uso de la Plataforma es <strong>gratis hasta la 5ta acreditación</strong>.</h4>
+            </div>
+            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+              <i class="bx bx-images"></i>
+              <h4>Ejemplo:</h4>
+              <p>Si el segundo mes tienes <strong>17 acreditaciones vigentes</strong> pagas solo <strong>$ 14.000</strong> según indica la tabla de precios. Si el mes siguiente tienes <strong>3 acreditaciones vigentes</strong>
+              no tiene costo. Si el mes siguiente tienes <strong>45 acreditaciones vigentes</strong> tiene un costo de <stron>$ 26.900</stron>.</p>
+            </div>
+            <div class="text-center"><a href="#contact" class="get-started-btn scrollto text-dark"><strong>Contacto FacilControl</strong></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Features Section -->
+
+    
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Contactanos</h3>
+          <p style="font-size: 22px;"> Escribenos mediante el formulario o al WhatsApp para obtener más información sobre la Plataforma FacilControl, el Gestor de Documentos que toda Contratista debe tener.</p>
+          <a class="cta-btn" href="#contact">Contacto FacilControl</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+   
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contacto</h2>
+          <p>Contaco FacilControl</p>
+        </div>
+
+       <!--<div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>-->
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Dirección:</h4>
+                <p>Lord Cochrane 136. Santiago. Chile.</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@facilcontrol.cl</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Telefono:</h4>
+                <p>+56 9-3645-0940</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Su nombre" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Su Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar Mensaje</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>FacilControl<span>.</span></h3>
+              <!--<img style="height: 50%;width: 50%;"   src="assets/img/logo_2.png" alt="" class="img-fluid">-->
+              <p>
+                Lord Cochrane 136. Santiago. Chile <br>
+                <strong>Telefono:</strong> +56 9-3645-0940<br>
+                <strong>Email:</strong> info@facilcontrol.cl<br>
+              </p>
+              <!--<div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <!--<h4>Useful Links</h4>-->
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Inicio</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
+              
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <!--<h4>Our Services</h4>-->
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Benficios</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Precios</a></li>
+              
+            </ul>
+          </div>
+
+          <!--<div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>FacilControl</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ 
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>-->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

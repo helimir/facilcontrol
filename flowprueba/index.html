@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suscripción con Flow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 1.5rem;
+            color: #333;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Elige tu Plan</h1>
+        <button id="plan-mensual">Suscribirse al Plan Mensual</button>
+        <button id="plan-anual">Suscribirse al Plan Anual</button>
+    </div>
+
+    <script>
+        // IDs de los planes en Flow Sandbox
+        const PLAN_MENSUAL_ID = 'F-MENSUALCL'; // Reemplaza con el ID de tu plan mensual en Sandbox
+        const PLAN_ANUAL_ID = 'FANUALCL'; // Reemplaza con el ID de tu plan anual en Sandbox
+
+        // Función para redirigir al pago
+        async function suscribirse(planId) {
+            const email = prompt("Ingresa tu correo electrónico:");
+            if (!email) return;
+
+            try {
+                const response = await fetch('crear_suscripcion.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ email, planId }),
+                });
+
+                const data = await response.json();
+                if (data.url) {
+                    window.location.href = data.url; // Redirige al cliente a Flow Sandbox
+                } else {
+                    alert('Error al crear la suscripción');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al conectar con el servidor');
+            }
+        }
+
+        // Eventos para los botones
+        document.getElementById('plan-mensual').addEventListener('click', () => {
+            suscribirse(PLAN_MENSUAL_ID);
+        });
+
+        document.getElementById('plan-anual').addEventListener('click', () => {
+            suscribirse(PLAN_ANUAL_ID);
+        });
+    </script>
+</body>
+</html>

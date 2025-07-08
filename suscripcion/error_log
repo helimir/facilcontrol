@@ -1,0 +1,1048 @@
+[25-Feb-2025 11:22:49 America/Santiago] PHP Warning:  include(config/config.php): Failed to open stream: No such file or directory in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 3
+[25-Feb-2025 11:22:49 America/Santiago] PHP Warning:  include(): Failed opening 'config/config.php' for inclusion (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 3
+[25-Feb-2025 11:22:49 America/Santiago] PHP Warning:  Undefined variable $con in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 7
+[25-Feb-2025 11:22:49 America/Santiago] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:7
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(7): mysqli_query(NULL, 'select * from r...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 7
+[25-Feb-2025 11:40:29 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:40:29 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 960
+[25-Feb-2025 11:40:29 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 961
+[25-Feb-2025 11:41:11 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:41:11 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 960
+[25-Feb-2025 11:41:11 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 961
+[25-Feb-2025 11:42:12 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[25-Feb-2025 11:42:21 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:42:21 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 960
+[25-Feb-2025 11:42:21 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 961
+[25-Feb-2025 11:45:47 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:45:47 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[25-Feb-2025 11:45:47 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 958
+[25-Feb-2025 11:45:58 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[25-Feb-2025 11:46:02 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:46:02 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[25-Feb-2025 11:46:02 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 958
+[25-Feb-2025 11:46:06 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[25-Feb-2025 11:48:09 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:48:09 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[25-Feb-2025 11:48:09 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 958
+[25-Feb-2025 11:48:20 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:48:20 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[25-Feb-2025 11:48:20 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 958
+[25-Feb-2025 11:48:49 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:48:49 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[25-Feb-2025 11:48:49 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 958
+[25-Feb-2025 11:49:04 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:49:04 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 11:49:04 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[25-Feb-2025 11:49:34 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:49:34 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 11:49:34 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[25-Feb-2025 11:50:40 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 11:50:40 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 11:50:40 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[25-Feb-2025 11:50:44 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 37
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 37
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 50
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 50
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 12:58:04 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[25-Feb-2025 13:21:35 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 13:21:35 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 13:21:35 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[25-Feb-2025 13:28:12 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'clubicl_proyecto.paises' doesn't exist in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:8
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(8): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 8
+[25-Feb-2025 13:28:13 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'clubicl_proyecto.paises' doesn't exist in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:8
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(8): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 8
+[25-Feb-2025 13:29:01 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'clubicl_proyecto.paises' doesn't exist in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:8
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(8): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 8
+[25-Feb-2025 13:30:56 America/Santiago] PHP Warning:  Undefined variable $paises in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 627
+[25-Feb-2025 13:30:56 America/Santiago] PHP Warning:  foreach() argument must be of type array|object, null given in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 627
+[25-Feb-2025 13:31:53 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'clubicl_proyecto.paises' doesn't exist in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:8
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(8): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 8
+[25-Feb-2025 13:32:20 America/Santiago] PHP Warning:  Undefined variable $paises in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 626
+[25-Feb-2025 13:32:20 America/Santiago] PHP Warning:  foreach() argument must be of type array|object, null given in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 626
+[25-Feb-2025 13:33:03 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'clubicl_proyecto.paises' doesn't exist in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:8
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(8): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 8
+[25-Feb-2025 14:16:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[25-Feb-2025 14:16:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[25-Feb-2025 14:16:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 11:10:20 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 11:10:20 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 11:10:20 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 11:46:57 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 11:46:57 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 11:46:57 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 18:57:48 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 18:57:48 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 18:57:48 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 19:57:16 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 19:57:16 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 19:57:16 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 21:09:54 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 21:09:54 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 21:09:54 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 21:46:42 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 21:46:42 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 21:46:42 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 22:22:42 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 22:22:42 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 22:22:42 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[26-Feb-2025 23:58:40 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[26-Feb-2025 23:58:40 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[26-Feb-2025 23:58:40 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 03:37:25 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 03:37:25 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 03:37:25 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 04:50:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 04:50:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 04:50:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 04:51:02 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[27-Feb-2025 05:12:24 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[27-Feb-2025 05:12:24 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[27-Feb-2025 05:12:24 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[27-Feb-2025 05:12:24 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[27-Feb-2025 05:12:24 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[27-Feb-2025 05:44:45 America/Santiago] PHP Warning:  Undefined array key "id_metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[27-Feb-2025 05:46:44 America/Santiago] PHP Warning:  Undefined array key "id_metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[27-Feb-2025 05:46:44 America/Santiago] PHP Warning:  Undefined variable $id_custorm in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 894
+[27-Feb-2025 06:02:36 America/Santiago] PHP Parse error:  Unclosed '{' on line 639 in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 640
+[27-Feb-2025 10:05:31 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 40
+[27-Feb-2025 10:05:31 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 40
+[27-Feb-2025 10:05:31 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 53
+[27-Feb-2025 10:05:31 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 53
+[27-Feb-2025 10:05:32 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 10:05:32 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 10:05:32 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 10:05:35 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 440
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 40
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 40
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 53
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 53
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 10:53:41 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 10:53:45 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 10:53:45 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 10:53:45 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 11:35:45 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 11:35:45 America/Santiago] PHP Warning:  Undefined array key "mensual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 859
+[27-Feb-2025 11:35:45 America/Santiago] PHP Warning:  Undefined array key "anual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 908
+[27-Feb-2025 11:35:45 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 11:35:45 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 11:37:33 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 11:37:33 America/Santiago] PHP Warning:  Undefined array key "mensual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 859
+[27-Feb-2025 11:37:33 America/Santiago] PHP Warning:  Undefined array key "anual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 908
+[27-Feb-2025 11:37:33 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 11:37:33 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 11:43:08 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 18
+[27-Feb-2025 11:43:08 America/Santiago] PHP Warning:  Undefined array key "mensual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 859
+[27-Feb-2025 11:43:08 America/Santiago] PHP Warning:  Undefined array key "anual" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 908
+[27-Feb-2025 11:43:08 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 953
+[27-Feb-2025 11:43:08 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 954
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1049
+[27-Feb-2025 11:43:11 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1050
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1000
+[27-Feb-2025 11:43:46 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1001
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1000
+[27-Feb-2025 11:44:28 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1001
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 906
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 955
+[27-Feb-2025 11:45:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 956
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 11:47:06 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:01:15 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:02:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:02:59 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:03:11 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:03:13 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:03:34 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:09:23 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 858
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 907
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 957
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1004
+[27-Feb-2025 12:25:34 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1005
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 912
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 912
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 962
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 962
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1009
+[27-Feb-2025 12:29:05 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1010
+[27-Feb-2025 12:31:09 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:31:09 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 966
+[27-Feb-2025 12:31:09 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 966
+[27-Feb-2025 12:31:09 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1013
+[27-Feb-2025 12:31:09 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1014
+[27-Feb-2025 12:32:43 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:32:43 America/Santiago] PHP Warning:  Undefined variable $result_planes in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 966
+[27-Feb-2025 12:32:43 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 966
+[27-Feb-2025 12:32:43 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1013
+[27-Feb-2025 12:32:43 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1014
+[27-Feb-2025 12:32:47 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:32:47 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[27-Feb-2025 12:32:47 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[27-Feb-2025 12:32:49 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'anual' in 'field list' in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php:24
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registro.php(24): mysqli_query(Object(mysqli), 'select anual fr...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 24
+[27-Feb-2025 12:32:57 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[27-Feb-2025 12:32:57 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[27-Feb-2025 12:32:57 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[27-Feb-2025 12:33:00 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'anual' in 'field list' in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php:24
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registro.php(24): mysqli_query(Object(mysqli), 'select anual fr...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 24
+[27-Feb-2025 12:35:36 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[27-Feb-2025 12:35:36 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[27-Feb-2025 17:38:41 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[27-Feb-2025 17:38:41 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[28-Feb-2025 08:29:56 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[28-Feb-2025 08:29:56 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[28-Feb-2025 10:14:06 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[28-Feb-2025 10:14:06 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[28-Feb-2025 10:57:36 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-Feb-2025 10:57:36 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[28-Feb-2025 10:57:36 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[28-Feb-2025 10:57:41 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[28-Feb-2025 10:57:41 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[28-Feb-2025 11:07:07 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-Feb-2025 11:07:07 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[28-Feb-2025 11:07:07 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[28-Feb-2025 11:15:07 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[28-Feb-2025 11:15:07 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[28-Feb-2025 11:18:41 America/Santiago] PHP Warning:  Undefined array key "anual" in /home2/clubicl/facilcontrol.cl/suscripcion/actualizar.php on line 13
+[28-Feb-2025 11:22:05 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 877
+[28-Feb-2025 11:22:05 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 943
+[28-Feb-2025 11:22:05 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 995
+[28-Feb-2025 11:22:09 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 877
+[28-Feb-2025 11:22:09 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 943
+[28-Feb-2025 11:22:09 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 995
+[28-Feb-2025 11:22:30 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 877
+[28-Feb-2025 11:22:30 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 943
+[28-Feb-2025 11:22:30 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 995
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 863
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 916
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 968
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[28-Feb-2025 11:22:33 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[28-Feb-2025 11:24:51 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-Feb-2025 11:24:51 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[28-Feb-2025 11:24:51 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[28-Feb-2025 11:25:18 America/Santiago] PHP Warning:  Undefined array key "monto" in /home2/clubicl/facilcontrol.cl/suscripcion/actualizar.php on line 10
+[28-Feb-2025 11:27:24 America/Santiago] PHP Warning:  Undefined array key "monto" in /home2/clubicl/facilcontrol.cl/suscripcion/actualizar.php on line 10
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:13 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:13 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:18 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:18 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[28-Feb-2025 13:27:55 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[28-Feb-2025 13:30:41 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'plan='Diario'' at line 1 in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:21
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php(21): mysqli_query(Object(mysqli), 'select * from p...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 10:43:25 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 10:43:25 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 10:43:35 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 10:43:35 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 10:43:35 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 13:08:51 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 13:08:51 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 13:08:51 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 16:17:27 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 16:17:27 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 16:17:27 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 17:16:43 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 17:16:43 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 17:17:09 America/Santiago] PHP Parse error:  Unclosed '{' on line 805 in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 808
+[01-Mar-2025 17:17:12 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 17:17:12 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 17:17:12 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:33:07 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:33:07 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:36:53 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:36:53 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 21
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:37:20 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:37:20 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 18:37:37 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 18:37:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 18:40:57 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 18:40:57 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 18:40:57 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 18:46:07 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 18:46:07 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 18:46:07 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 18:46:36 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[01-Mar-2025 18:46:36 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 18:47:48 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 18:47:48 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 18:47:48 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 18:47:48 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 18:47:48 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 18:55:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 18:55:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 18:55:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 19:04:23 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[01-Mar-2025 19:04:23 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 19:05:05 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 19:05:05 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 19:05:05 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 19:05:05 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 19:05:05 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 19:32:14 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 19:32:14 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 20:55:32 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 20:55:32 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 20:55:32 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 21:48:55 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 21:48:55 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 21:48:55 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 21:49:18 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 21:49:18 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 21:49:20 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[01-Mar-2025 21:49:20 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 21:52:00 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 21:52:00 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 21:52:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 21:52:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 21:52:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 21:58:24 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 21:58:24 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 21:58:24 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 22:01:15 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[01-Mar-2025 22:01:15 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 22:01:51 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 22:01:51 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 22:01:51 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 22:01:51 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 22:01:51 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:13:21 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:13:21 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:13:22 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 22:13:22 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 22:13:22 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 22:13:28 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 444
+[01-Mar-2025 22:13:28 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 22:14:13 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 22:14:13 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 22:14:13 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 22:14:13 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 22:14:13 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 22:20:17 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 22:20:17 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 22:20:17 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 22:20:21 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 22:21:05 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 447
+[01-Mar-2025 22:22:50 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 22:22:50 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 22:22:50 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 22:22:50 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 22:22:50 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:26:37 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 22:26:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 22:26:44 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 22:26:44 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 22:26:44 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 22:26:44 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 410
+[01-Mar-2025 22:26:44 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 22:48:35 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 22:48:35 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 22:48:35 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 23:05:07 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 23:05:07 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 23:05:07 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 23:05:14 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[01-Mar-2025 23:05:49 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'planid' in 'field list' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[01-Mar-2025 23:15:07 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 23:15:07 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 23:15:07 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[01-Mar-2025 23:15:11 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[01-Mar-2025 23:19:42 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[01-Mar-2025 23:19:42 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[01-Mar-2025 23:19:42 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[01-Mar-2025 23:19:42 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[01-Mar-2025 23:19:42 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 23:28:17 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[01-Mar-2025 23:28:17 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[02-Mar-2025 00:21:21 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[02-Mar-2025 00:21:21 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[02-Mar-2025 00:21:21 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[02-Mar-2025 00:21:26 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 00:22:55 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 04:48:27 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 04:52:29 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 04:54:18 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[02-Mar-2025 04:54:18 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[02-Mar-2025 04:54:18 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[02-Mar-2025 04:54:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[02-Mar-2025 04:54:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[02-Mar-2025 04:54:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[02-Mar-2025 04:55:42 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 04:58:16 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[02-Mar-2025 06:34:06 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[07-Mar-2025 11:53:44 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[07-Mar-2025 11:53:44 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[07-Mar-2025 11:53:44 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[13-Mar-2025 21:30:10 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[13-Mar-2025 21:30:10 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[13-Mar-2025 21:30:10 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[14-Mar-2025 23:42:46 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[14-Mar-2025 23:42:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[14-Mar-2025 23:42:46 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[14-Mar-2025 23:44:44 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 9
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 9
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 10
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 12
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 471
+[14-Mar-2025 23:45:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/checkout.php on line 473
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 13
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 15
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 16
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 17
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[14-Mar-2025 23:48:28 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[14-Mar-2025 23:48:28 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 34
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 34
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 47
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 47
+[14-Mar-2025 23:50:11 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 47
+[14-Mar-2025 23:50:11 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:47
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 47
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 13
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 15
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 16
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 17
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 41
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Undefined variable $result_plan in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[14-Mar-2025 23:50:40 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[14-Mar-2025 23:50:40 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:54
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 54
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 324
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 332
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 396
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $confirmar in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 474
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $cliente in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 484
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 496
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 662
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 662
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $cliente in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 663
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 664
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 664
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 665
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $confirmar in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 760
+[14-Mar-2025 23:51:56 America/Santiago] PHP Warning:  Undefined variable $id_custorm in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 761
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 13
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 15
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 16
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 17
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 26
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 39
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Undefined variable $result_plan in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 39
+[14-Mar-2025 23:52:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 39
+[14-Mar-2025 23:52:23 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:39
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 39
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 10
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 10
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 23
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 23
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Undefined variable $result_plan in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 23
+[14-Mar-2025 23:52:42 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 23
+[14-Mar-2025 23:52:42 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:23
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 23
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 328
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 336
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 400
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $confirmar in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 478
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $cliente in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 488
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 500
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 666
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 666
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $cliente in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 667
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 668
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 668
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $monto in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 669
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $confirmar in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 764
+[14-Mar-2025 23:53:06 America/Santiago] PHP Warning:  Undefined variable $id_custorm in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 765
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 12
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 13
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 14
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 15
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 16
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 17
+[14-Mar-2025 23:53:23 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[14-Mar-2025 23:53:24 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 697
+[14-Mar-2025 23:53:24 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 699
+[14-Mar-2025 23:58:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[14-Mar-2025 23:58:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[14-Mar-2025 23:58:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[16-Mar-2025 23:17:09 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[16-Mar-2025 23:17:09 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[16-Mar-2025 23:17:09 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[18-Mar-2025 06:23:13 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[18-Mar-2025 06:23:13 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[18-Mar-2025 06:23:13 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[19-Mar-2025 01:32:46 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 01:32:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[19-Mar-2025 01:32:46 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[19-Mar-2025 01:32:52 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:33:40 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:33:49 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:33:57 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:34:29 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:34:30 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:34:31 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:34:31 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:34:31 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:37:11 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:37:28 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:37:55 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 01:37:55 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[19-Mar-2025 01:37:55 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[19-Mar-2025 01:38:03 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:38:13 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:38:32 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:38:45 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:41:34 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 01:41:34 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[19-Mar-2025 01:41:41 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:43:47 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/registro.php on line 455
+[19-Mar-2025 01:43:55 America/Santiago] PHP Fatal error:  Uncaught mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php:55
+Stack trace:
+#0 /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php(55): mysqli_query(Object(mysqli), 'insert into reg...')
+#1 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 55
+[19-Mar-2025 01:45:36 America/Santiago] PHP Warning:  Undefined variable $query in /home2/clubicl/facilcontrol.cl/suscripcion/registrar.php on line 56
+[19-Mar-2025 01:52:34 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[19-Mar-2025 01:52:34 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 22
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 42
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Undefined variable $result in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[19-Mar-2025 01:52:35 America/Santiago] PHP Fatal error:  Uncaught DivisionByZeroError: Division by zero in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php:55
+Stack trace:
+#0 {main}
+  thrown in /home2/clubicl/facilcontrol.cl/suscripcion/finalizar.php on line 55
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1015
+[19-Mar-2025 01:52:35 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 1016
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 316
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 339
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 397
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 405
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 408
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 411
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 415
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 415
+[19-Mar-2025 10:38:26 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 431
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 388
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 391
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 394
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:42:12 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 414
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 388
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 391
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 394
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:43:54 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 414
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 388
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 391
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 394
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:47:29 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 414
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 388
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 391
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 394
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:48:02 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 414
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 388
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 391
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 394
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined variable $imagen in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined array key "metodo" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 398
+[19-Mar-2025 10:48:17 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 414
+[19-Mar-2025 10:51:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:51:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:51:00 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:51:00 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 402
+[19-Mar-2025 10:51:15 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:51:15 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:51:15 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:51:15 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 402
+[19-Mar-2025 10:51:46 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:51:46 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:51:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:51:46 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 400
+[19-Mar-2025 10:52:36 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 299
+[19-Mar-2025 10:52:36 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 322
+[19-Mar-2025 10:52:36 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 380
+[19-Mar-2025 10:52:36 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/estado_1.php on line 400
+[19-Mar-2025 10:52:40 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 10:52:40 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[19-Mar-2025 10:52:40 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[19-Mar-2025 10:55:04 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 10:55:04 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[19-Mar-2025 10:55:04 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[19-Mar-2025 11:07:13 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Mar-2025 11:07:13 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[19-Mar-2025 11:07:13 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[20-Mar-2025 00:45:46 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[20-Mar-2025 00:45:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[20-Mar-2025 00:45:46 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[20-Mar-2025 11:41:19 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[20-Mar-2025 11:41:19 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[20-Mar-2025 11:41:19 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[20-Mar-2025 11:51:15 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[20-Mar-2025 11:51:15 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[20-Mar-2025 11:51:15 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[21-Mar-2025 01:22:32 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[21-Mar-2025 01:22:32 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[21-Mar-2025 01:22:32 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[21-Mar-2025 10:40:19 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[21-Mar-2025 10:40:19 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[21-Mar-2025 10:40:19 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[21-Mar-2025 20:24:45 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[21-Mar-2025 20:24:45 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[21-Mar-2025 20:24:45 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[22-Mar-2025 04:09:19 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[22-Mar-2025 04:09:19 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[22-Mar-2025 04:09:19 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[24-Mar-2025 15:17:55 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[24-Mar-2025 15:17:55 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[24-Mar-2025 15:17:55 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[24-Mar-2025 23:00:51 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[24-Mar-2025 23:00:51 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[24-Mar-2025 23:00:51 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 320
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[24-Mar-2025 23:54:32 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[24-Mar-2025 23:54:41 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[24-Mar-2025 23:54:41 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[24-Mar-2025 23:54:41 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 320
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[24-Mar-2025 23:54:45 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 320
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[24-Mar-2025 23:56:20 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 269
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Undefined variable $sesion in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 277
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 300
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Trying to access array offset on value of type null in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 320
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 326
+[25-Mar-2025 11:55:21 America/Santiago] PHP Warning:  Undefined variable $useragent in /home2/clubicl/facilcontrol.cl/suscripcion/confirmar_email.php on line 454
+[26-Mar-2025 23:18:31 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[26-Mar-2025 23:18:31 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[26-Mar-2025 23:18:31 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[04-Apr-2025 03:08:44 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[04-Apr-2025 03:08:44 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[04-Apr-2025 03:08:44 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[12-Apr-2025 03:03:42 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[12-Apr-2025 03:03:42 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[12-Apr-2025 03:03:42 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[16-Apr-2025 16:50:56 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[16-Apr-2025 16:50:56 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[16-Apr-2025 16:50:56 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[19-Apr-2025 02:08:47 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[19-Apr-2025 02:08:47 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[19-Apr-2025 02:08:47 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[22-Apr-2025 05:48:09 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[22-Apr-2025 05:48:09 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[22-Apr-2025 05:48:09 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[30-Apr-2025 00:59:26 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[30-Apr-2025 00:59:26 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[30-Apr-2025 00:59:26 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[01-May-2025 22:33:52 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[01-May-2025 22:33:52 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[01-May-2025 22:33:52 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[09-May-2025 14:47:57 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[09-May-2025 14:47:57 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[09-May-2025 14:47:57 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[11-May-2025 15:24:01 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[11-May-2025 15:24:01 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[11-May-2025 15:24:01 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[18-May-2025 16:05:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[18-May-2025 16:05:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[18-May-2025 16:05:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[20-May-2025 13:35:17 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[20-May-2025 13:35:17 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[20-May-2025 13:35:17 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[21-May-2025 17:52:17 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[21-May-2025 17:52:17 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[21-May-2025 17:52:17 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[26-May-2025 23:01:39 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[26-May-2025 23:01:39 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[26-May-2025 23:01:39 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[28-May-2025 20:21:46 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[28-May-2025 20:21:46 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[28-May-2025 20:21:46 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[02-Jun-2025 01:42:42 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[02-Jun-2025 01:42:42 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[02-Jun-2025 01:42:42 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[03-Jun-2025 12:33:04 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[03-Jun-2025 12:33:04 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[03-Jun-2025 12:33:04 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[05-Jun-2025 07:57:15 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[05-Jun-2025 07:57:15 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[05-Jun-2025 07:57:15 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[06-Jun-2025 22:08:50 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[06-Jun-2025 22:08:50 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[06-Jun-2025 22:08:50 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[08-Jun-2025 14:45:11 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[08-Jun-2025 14:45:11 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[08-Jun-2025 14:45:11 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[09-Jun-2025 22:36:37 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[09-Jun-2025 22:36:37 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[09-Jun-2025 22:36:37 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[11-Jun-2025 19:43:52 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[11-Jun-2025 19:43:52 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[11-Jun-2025 19:43:52 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
+[18-Jun-2025 02:36:04 America/Santiago] PHP Warning:  Undefined variable $estado in /home2/clubicl/facilcontrol.cl/suscripcion/suscripcion.php on line 16
+[18-Jun-2025 02:36:04 America/Santiago] PHP Warning:  Undefined array key "plan" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 495
+[18-Jun-2025 02:36:04 America/Santiago] PHP Warning:  Undefined array key "email" in /home2/clubicl/facilcontrol.cl/suscripcion/estado_2.php on line 496
