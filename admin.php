@@ -1,10 +1,22 @@
 <?php
  session_start();
 include "config/config.php";
-include "funciones.php";
+
+setlocale(LC_MONETARY,"es_CL");
+$year=date('Y');
 
 $query_config=mysqli_query($con,"select * from configuracion ");
 $result_config=mysqli_fetch_array($query_config);
+
+
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+    $url = "https://";
+} else {
+    $url = "http://";
+}
+#echo $url_actual = $url . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$url_actual = $url . $_SERVER['HTTP_HOST'].'/';
+
 
 ?>
 
@@ -111,8 +123,7 @@ $result_config=mysqli_fetch_array($query_config);
     margin-top:13px;
     }
 
-
-    .password-container input {
+.password-container input {
       width: 100%;
       padding: 10px 40px 10px 15px;
       border: 1px solid #ccc;
@@ -216,7 +227,7 @@ function checkRut(rut) {
   
 
   if (rut.value.length <= 1) {
-      $("#help").html("<span style='color:#1AB394;' >Ingrese un RUT v�lido</span>");
+      $("#help").html("<span style='color:#1AB394;font-weight:bold' >Ingrese un RUT válido</span>");
     return false
   }
 
@@ -232,7 +243,7 @@ function checkRut(rut) {
 
   // Si no cumple con el minimo ej. (n.nnn.nnn)
   if (bodyRut.length < 7) {
-    $("#help").html("<span style='color:#1AB394;font-weight:bold' >Rut de ser mayor de 7 d�gitos</span>");
+    $("#help").html("<span style='color:#1AB394;font-weight:bold' >Rut de ser mayor de 7 dpigitos</span>");
     return false
   }
 
@@ -265,10 +276,10 @@ function checkRut(rut) {
 
   // Validar que el Cuerpo coincide con su Dígito Verificador
   if (dvEsperado != dv) {    
-    $("#help").html("<span style='color:#ED5565;font-weight:bold' >Rut Inv�lido</span>");
+    $("#help").html("<span style='color:#ED5565;font-weight:bold' >Rut Inválido</span>");
     return false
   } else {
-    $("#help").html("<span style='color:#1C84C6;font-weight:bold' >Rut V�lido</span>");
+    $("#help").html("<span style='color:#1C84C6;font-weight:bold' >Rut válido</span>");
     return false
   }
 }
@@ -302,27 +313,12 @@ function togglePassword() {
             }
         }
 
-       
                            
 
 </script>       
 
 </head>
 
-<?php
-
-/**
- * @author helimirlopez
- * @copyright 2022
- */
-
-setlocale(LC_MONETARY,"es_CL");
-$dia=date('d');
-$mes1=date('m');
-$year=date('Y');
-
-
-?>
 
 <?php $useragent = $_SERVER['HTTP_USER_AGENT'] ?? '';
     if (preg_match("/mobile/i", $useragent) ) { ?>
@@ -348,6 +344,7 @@ $year=date('Y');
             <form class="m-t" role="form" method="post" id="frmLogin" action="login.php">
                 <div class="form-group">
                     <input type="text" name="rut" id="rut" class="form-control" placeholder="RUT" maxlength="12" oninput="checkRut(this)"  required="" autocomplete="off" />
+                    <span id="help"></span>
                 </div>
                 <div class="form-group password-container">
                     <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required="" autocomplete="off" />
