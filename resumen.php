@@ -1,31 +1,58 @@
 <?php
 
 if ($_SESSION['nivel']==3) {
-    $query_gestion_doc_contratista=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='1' order by n.idnoti desc    ");
-    $cant_gestion_doc_contratista=mysqli_num_rows($query_gestion_doc_contratista);
+    $query_gestion_doc_contratista=mysqli_query($con,"select count(*) as total  from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='1' order by n.idnoti desc    ");
+    $result_gestion_doc_contratista=mysqli_fetch_array($query_gestion_doc_contratista);
+    $cant_gestion_doc_contratista=$result_gestion_doc_contratista['total'] ?? '';
 
-    $query_gestion_doc_trabajador=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='2' order by n.idnoti desc    ");
-    $cant_gestion_doc_trabajador=mysqli_num_rows($query_gestion_doc_trabajador);
+    $query_gestion_doc_trabajador=mysqli_query($con,"select count(*) as total from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='2' order by n.idnoti desc    ");
+    $result_gestion_doc_trabajador=mysqli_fetch_array($query_gestion_doc_trabajador);
+    $cant_gestion_doc_trabajador=$result_gestion_doc_trabajador['total'] ?? '';
 
-    $query_gestion_doc_vehiculo=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='3' order by n.idnoti desc    ");
-    $cant_gestion_doc_vehiculo=mysqli_num_rows($query_gestion_doc_vehiculo);
+    $query_gestion_doc_vehiculo=mysqli_query($con,"select count(*) as total from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='3' order by n.idnoti desc    ");
+    $result_gestion_doc_vehiculo=mysqli_fetch_array($query_gestion_doc_vehiculo);
+    $cant_gestion_doc_vehiculo=$result_gestion_doc_vehiculo['total'] ?? '';
 
-    $query_gestion_doc_mensuales=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='4' order by n.idnoti desc    ");
-    $cant_gestion_doc_mensuales=mysqli_num_rows($query_gestion_doc_mensuales);
+    $query_gestion_doc_mensuales=mysqli_query($con,"select count(*) as total from notificaciones as n left join contratistas as m On m.id_contratista=n.recibe where m.rut='".$_SESSION['usuario']."' and procesada=0 and tipo='4' order by n.idnoti desc    ");
+    $result_gestion_doc_mensuales=mysqli_fetch_array($query_gestion_doc_mensuales);
+    $cant_gestion_doc_mensuales=$result_gestion_doc_mensuales['total'] ?? '';
 }
 
 if ($_SESSION['nivel']==2) {
-    $query_gestion_doc_contratista=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='1' order by n.idnoti desc    ");
-    $cant_gestion_doc_contratista=mysqli_num_rows($query_gestion_doc_contratista);
+    $query_gestion_doc_contratista=mysqli_query($con,"select count(*) as total from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='1' order by n.idnoti desc ");
+    $result_gestion_doc_contratista=mysqli_fetch_array($query_gestion_doc_contratista);
+    $cant_gestion_doc_contratista=$result_gestion_doc_contratista['total'] ?? '';
 
-    $query_gestion_doc_trabajador=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='2' order by n.idnoti desc    ");
-    $cant_gestion_doc_trabajador=mysqli_num_rows($query_gestion_doc_trabajador);
+    $query_gestion_doc_trabajador=mysqli_query($con,"select count(*) as total from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='2' order by n.idnoti desc    ");
+    $result_gestion_doc_trabajador=mysqli_fetch_array($query_gestion_doc_trabajador);
+    $cant_gestion_doc_trabajador=$result_gestion_doc_trabajador['total'] ?? '';
 
-    $query_gestion_doc_vehiculo=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='3' order by n.idnoti desc    ");
-    $cant_gestion_doc_vehiculo=mysqli_num_rows($query_gestion_doc_vehiculo);
+    $query_gestion_doc_vehiculo=mysqli_query($con,"select count(*) as total from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='3' order by n.idnoti desc    ");
+    $result_gestion_doc_vehiculo=mysqli_fetch_array($query_gestion_doc_vehiculo);
+    $cant_gestion_doc_vehiculo=$result_gestion_doc_vehiculo['total'] ?? '';
 
-    $query_gestion_doc_mensuales=mysqli_query($con,"select n.*, m.razon_social as remitente from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='4' order by n.idnoti desc    ");
-    $cant_gestion_doc_mensuales=mysqli_num_rows($query_gestion_doc_mensuales);
+    $query_gestion_doc_mensuales=mysqli_query($con,"select count(*) as total from notificaciones as n left join mandantes as m On m.id_mandante=n.recibe where m.rut_empresa='".$_SESSION['usuario']."' and procesada=0 and tipo='4' order by n.idnoti desc    ");
+    $result_gestion_doc_mensuales=mysqli_fetch_array($query_gestion_doc_mensuales);
+    $cant_gestion_doc_mensuales=$result_gestion_doc_mensuales['total'] ?? '';
+}
+
+
+if ($_SESSION['nivel']==1) {
+    $query_gestion_doc_contratista=mysqli_query($con,"select count(*) as total from notificaciones  where procesada=0 and tipo='1' order by idnoti desc    ");
+    $result_gestion_doc_contratista=mysqli_fetch_array($query_gestion_doc_contratista);
+    $cant_gestion_doc_contratista=$result_gestion_doc_contratista['total'] ?? '';
+
+    $query_gestion_doc_trabajador=mysqli_query($con,"select count(*) as total from notificaciones  where procesada=0 and tipo='2' order by idnoti desc    ");
+    $result_gestion_doc_trabajador=mysqli_fetch_array($query_gestion_doc_trabajador);
+    $cant_gestion_doc_trabajador=$result_gestion_doc_trabajador['total'] ?? '';
+
+    $query_gestion_doc_vehiculo=mysqli_query($con,"select count(*) as total from notificaciones where procesada=0 and tipo='3' order by idnoti desc    ");
+    $result_gestion_doc_vehiculo=mysqli_fetch_array($query_gestion_doc_vehiculo);
+    $cant_gestion_doc_vehiculo=$result_gestion_doc_vehiculo['total'] ?? '';
+
+    $query_gestion_doc_mensuales=mysqli_query($con,"select count(*) as total from notificaciones where procesada=0 and tipo='4' order by idnoti desc    ");
+    $result_gestion_doc_mensuales=mysqli_fetch_array($query_gestion_doc_mensuales);
+    $cant_gestion_doc_mensuales=$result_gestion_doc_mensuales['total'] ?? '';
 }
 
 ?>

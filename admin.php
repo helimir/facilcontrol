@@ -602,20 +602,8 @@ function togglePassword() {
     <!-- Peity -->
     <script src="js\plugins\peity\jquery.peity.min.js"></script>
 
-    <!-- Peity demo data -->
-    <script src="js\demo\peity-demo.js"></script>
-    
-    <!-- DROPZONE -->
-    <script src="js\plugins\dropzone\dropzone.js"></script>
 
-    <!-- CodeMirror -->
-    <script src="js\plugins\codemirror\codemirror.js"></script>
-    <script src="js\plugins\codemirror\mode\xml\xml.js"></script>
-    
-    <!-- Ladda -->
-    <script src="js\plugins\ladda\spin.min.js"></script>
-    <script src="js\plugins\ladda\ladda.min.js"></script>
-    <script src="js\plugins\ladda\ladda.jquery.min.js"></script>
+
     
     <script>
     
