@@ -34,19 +34,17 @@ $num_cargos=$_GET['cargos']; ?>
             <tbody>
                
            <?php 
-           
-           
-                    $sql_mandante=mysqli_query($con,"select * from mandantes where rut_empresa='".$_SESSION['usuario']."'  ");
-                    $result=mysqli_fetch_array($sql_mandante);
-                    $mandante=$result['id_mandante'];
-                       
-                    $query=mysqli_query($con,"select * from contratos where id_contrato='".$contrato."' ");
-                    $fila=mysqli_fetch_array($query);
-                    $cargos=unserialize($fila['vehiculos']);
+                $sql_mandante=mysqli_query($con,"select id_mandante from mandantes where rut_empresa='".$_SESSION['usuario']."'  ");
+                $result=mysqli_fetch_array($sql_mandante);
+                $mandante=$result['id_mandante'];
+
+                $query=mysqli_query($con,"select vehiculos from contratos where id_contrato='".$contrato."' ");
+                $fila=mysqli_fetch_array($query);
+                $cargos=unserialize($fila['vehiculos']);
                     
-                     $query3=mysqli_query($con,"select * from perfiles_vehiculos where contrato='$contrato' and mandante='$mandante' ");
-                     $fila3=mysqli_fetch_array($query3);
-                     $perfiles=unserialize($fila3['perfiles']);
+                $query3=mysqli_query($con,"select perfiles from perfiles_vehiculos where contrato='$contrato' and mandante='$mandante' ");
+                $fila3=mysqli_fetch_array($query3);
+                $perfiles=unserialize($fila3['perfiles']);
                     
                  $id=0;
                  $asignado=0;
@@ -69,11 +67,12 @@ $num_cargos=$_GET['cargos']; ?>
                            
                            <input type="hidden" name="cantidad" id="cantidad" value="<?php echo $id ?>" />
                            <input type="hidden" name="contrato" id="contrato" value="<?php echo $contrato ?>" />
+                           <input type="hidden" name="mandante" id="mandante" value="<?php echo $mandante ?>" />
                            <input type="hidden" name="cargos[]" id="cargos" value="<?php echo $row ?>" />
                            <tr>
                                 <td style="width: 30%;font-size: 13px;"><?php echo $result_cargo['auto'] ?></td>                                
                                 <?php if ($result_perfil['nombre_perfil']=="") { ?>
-                                            <td><label style="padding:1% 3%" class="form-label text-center block badge-danger">SIN PERFIL</label></td>
+                                            <td><label style="font-weight:bold" class="form-label text-center text-danger">SIN PERFIL</label></td>
                                             <td> 
                                                 <?php if ($existe_obs==0) { ?>
                                                                 <select  name="perfil_lista[]" id="perfil_lista-<?php echo $id ?>" class="form-control">

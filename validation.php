@@ -1,5 +1,4 @@
 <?php
-
 include "config/config.php"; 
 date_default_timezone_set('America/Santiago');
 $date = date('Y-m-d H:m:s', time());
@@ -13,13 +12,9 @@ $result_token=mysqli_fetch_array($sql_token);
 if ($result_token['estado_user']==0) {
 
 ?>
-
 <!DOCTYPE html>
 <meta name="google" content="notranslate" />
 <html>
-
-
-
 <head>
 
     <meta charset="utf-8">
@@ -29,12 +24,15 @@ if ($result_token['estado_user']==0) {
 
      <link href="css\bootstrap.min.css" rel="stylesheet">
     <link href="font-awesome\css\font-awesome.css" rel="stylesheet"> 
+    <link href="assets/img/favicon.png" rel="icon">   
+
      <!-- Sweet Alert -->
     <link href="css\plugins\sweetalert\sweetalert.css" rel="stylesheet" />
 
     <link href="css\animate.css" rel="stylesheet">
     <link href="css\style.css" rel="stylesheet">
     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
     <script>
 
@@ -55,11 +53,11 @@ function comparar() {
     if (aceptar) {
          if (pass1!="" && pass2!="") {
             if (pass1!=pass2) {
-                swal({
-                    title: "Claves deben ser iguales",
-                    //text: "Vuelva a intetar",
-                    type: "warning"
-                }); 
+                Swal.fire({
+                    title: "Contraseñas deben ser iguales",
+                    icon: "warning",
+                    draggable: true
+                });
             } else {
                 $.ajax({
                     method: 'POST',
@@ -71,19 +69,19 @@ function comparar() {
                     success: function(data){
                         if (data==0){  
                             $('#modal_cargar').modal('hide');
-                            swal({
-                                title: "Cuenta Creada",
-                                //text: "Vuelva a intetar",
-                                type: "success"
-                            }); 
-                            window.location.href='admin.php';
-                        } else {
-                            swal({
-                                title: "Clave No se Acualizo",
-                                text: "Vuelva a intetar",
-                                type: "error"
+                            Swal.fire({
+                                title: "Cuenta Validada",
+                                icon: "success",
+                                draggable: true
                             });
+                            window.location.href='admin.php';
+                        } else {                            
                             $('#modal_cargar').modal('hide');
+                            Swal.fire({
+                                title: "Clave No se Acualizo",
+                                icon: "error",
+                                draggable: true
+                            });
                              window.location.href='validation.php?token='+token;  
                         }
                     },
@@ -97,18 +95,18 @@ function comparar() {
             }
             
          } else {
-            swal({
-                title: "Alguna clave esta vacia",
-                //text: "Vuelva a intetar",
-                type: "warning"
-            }); 
+                Swal.fire({
+                    title: "Alguna clave esta vacia",
+                    icon: "warning",
+                    draggable: true
+                });
          }   
      } else {
-        swal({
+        Swal.fire({
             title: "Aceptar Terminos y Condiciones",
-            //text: "Vuelva a intetar",
-            type: "warning"
-        }); 
+            icon: "warning",
+            draggable: true
+        });        
      }   
     
     

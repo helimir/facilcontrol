@@ -1,20 +1,25 @@
 <?php
 include "../config/config.php"; 
-
+session_start();
 
 date_default_timezone_set('America/Santiago');
 $date = date('Y-m-d H:m:s', time());
 
-$perfiles=serialize($_POST['perfiles']);
-$cargos=serialize($_POST['cargos']);
-$mandante=$_SESSION['mandante'];
-$contrato=$_POST['contrato'];
+$arr_perfiles=$_POST['perfiles'] ?? '';
+$arr_cargos=$_POST['cargos'] ?? '';
+
+$perfiles=serialize($arr_perfiles);
+$cargos=serialize($arr_cargos);
+$mandante=$_POST['mandante'] ?? '';
+$contrato=$_POST['contrato'] ?? '';
+
+$cantidad=$_POST['cantidad'] ?? '';
 
 
 $query=mysqli_query($con,"select * from perfiles_vehiculos where mandante='$mandante' and contrato='$contrato' ");
 $result=mysqli_num_rows($query);
 
-for ($i=0;$i<=$_POST['cantidad'];$i++) {
+for ($i=0;$i<=$cantidad;$i++) {
     $lista[$i]=$_POST['perfil_lista'][$i];
 }
 $lista_perfil=serialize($lista);

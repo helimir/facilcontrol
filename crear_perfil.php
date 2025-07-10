@@ -47,6 +47,8 @@ $year=date('Y');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="loader.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <script src="js\jquery-3.1.1.min.js"></script>
 <script>
@@ -268,11 +270,11 @@ $year=date('Y');
       if (nombre!="") {
           const doc = document.querySelectorAll('input[type=checkbox]:checked'); 
          if(doc.length <= 0){
-            swal({
-                title: "Lista Vacia",
-                text: "Debe seleccionar al menos un documento",
-                type: "warning"
-            });   
+            Swal.fire({
+                title: "Lista Vacía",
+                icon: "warning",
+                draggable: true
+            });
          } else {
               var valores=$('#frmPerfil').serialize();
               $.ajax({
@@ -284,21 +286,25 @@ $year=date('Y');
         			},
         			success: function(data){			  
                      if (data==0) {                        
-                         swal({
+                         Swal.fire({
                                 title: "Perfil Creado",
-                                //text: "You clicked the button!",
-                                type: "success"
-                         });
+                                icon: "success",
+                                draggable: true
+                            });
                          setTimeout(window.location.href='list_perfil.php', 3000);
         			  } else {
         			     if (data==1) { 
-                            swal("Cancelado", "Perfil No Creado. Vuelva a Intentar.", "error");
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "Error de sistema! Vuelva a intentar",
+                            });
                          }
                          if (data==2) { 
-                            swal({
-                                title: "Perfil Ya Existe",
-                                text: "Nombre de Perfil ya creado",
-                                type: "warning"
+                            Swal.fire({
+                                title: "Nombre de Perfil Ya Existe",
+                                icon: "warning",
+                                draggable: true
                             });
                          }                          
                             
@@ -312,11 +318,11 @@ $year=date('Y');
                 });
              }  
         } else {
-                     swal({
-                        title: "Nombre del Perfil",
-                        text: "Campo Requerido",
-                        type: "warning"
-                    });
+            Swal.fire({
+                title: "Falta Nombre del Perfil",
+                icon: "warning",
+                draggable: true
+            });
         }                   
   }
 

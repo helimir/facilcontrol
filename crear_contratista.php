@@ -1312,7 +1312,7 @@ function validar_rep(rut_rep) {
                                                                                               var valores=$('#frmContratistas').serialize();
                                                                                               $.ajax({
                                                                                     			method: "POST",
-                                                                                                url: "add/contratistas.php",
+                                                                                                url: "add/add_contratistas.php",
                                                                                                 data: valores,
                                                                                                 beforeSend: function(){
                                                                                                     $('#modal_cargar').modal('show');						

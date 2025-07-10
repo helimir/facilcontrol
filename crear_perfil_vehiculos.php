@@ -41,19 +41,13 @@ $year=date('Y');
      <!-- Sweet Alert -->
     <link href="css\plugins\sweetalert\sweetalert.css" rel="stylesheet" />
     
-    <link href="css\plugins\dropzone\basic.css" rel="stylesheet">
-    <link href="css\plugins\dropzone\dropzone.css" rel="stylesheet">
-    <link href="css\plugins\jasny\jasny-bootstrap.min.css" rel="stylesheet">
-    <link href="css\plugins\codemirror\codemirror.css" rel="stylesheet">
-    
-    <!-- Ladda style -->
-    <link href="css\plugins\ladda\ladda-themeless.min.css" rel="stylesheet">
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="loader.css">
 
+    <script src="js\jquery-3.1.1.min.js"></script>
 
-<script src="js\jquery-3.1.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 <script>
  
  $(document).ready(function () {
@@ -280,14 +274,7 @@ $year=date('Y');
     
      <!-- Jasny -->
     <script src="js\plugins\jasny\jasny-bootstrap.min.js"></script>
-
-    <!-- DROPZONE -->
-    <script src="js\plugins\dropzone\dropzone.js"></script>
-
-    <!-- CodeMirror -->
-    <script src="js\plugins\codemirror\codemirror.js"></script>
-    <script src="js\plugins\codemirror\mode\xml\xml.js"></script>
-    
+   
 
     <!-- iCheck -->
     <script src="js\plugins\iCheck\icheck.min.js"></script>
@@ -312,11 +299,11 @@ $year=date('Y');
       if (nombre!="") {
           const doc = document.querySelectorAll('input[type=checkbox]:checked'); 
          if(doc.length <= 0){
-            swal({
-                title: "Lista Vacia",
-                text: "Debe seleccionar al menos un documento",
-                type: "warning"
-            });   
+            Swal.fire({
+                title: "Lista Vacía",
+                icon: "warning",
+                draggable: true
+            });
          } else {
               var valores=$('#frmPerfil').serialize();
               $.ajax({
@@ -328,21 +315,25 @@ $year=date('Y');
         			},
         			success: function(data){			  
                      if (data==0) {                        
-                         swal({
-                                title: "Perfil Creado",
-                                //text: "You clicked the button!",
-                                type: "success"
-                         });
+                         Swal.fire({
+                            title: "Perfil Creado",
+                            icon: "success",
+                            draggable: true
+                        });
                          setTimeout(window.location.href='list_perfil.php', 3000);
         			  } else {
         			     if (data==1) { 
-                            swal("Cancelado", "Perfil No Creado. Vuelva a Intentar.", "error");
+                            Swal.fire({
+                                icon: "error",
+                                title: "Oops...",
+                                text: "Error de sistema! Vuelva a intentar",
+                            });
                          }
                          if (data==2) { 
-                            swal({
-                                title: "Perfil Ya Existe",
-                                text: "Nombre de Perfil ya creado",
-                                type: "warning"
+                            Swal.fire({
+                                title: "Nombre de Perfil ya existe",
+                                icon: "warning",
+                                draggable: true
                             });
                          }                          
                             
@@ -356,11 +347,11 @@ $year=date('Y');
                 });
              }  
         } else {
-                     swal({
-                        title: "Nombre del Perfil",
-                        text: "Campo Requerido",
-                        type: "warning"
-                    });
+            Swal.fire({
+                title: "Falta Nombre del Perfil",
+                icon: "warning",
+                draggable: true
+            });
         }                   
   }
 

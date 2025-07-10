@@ -19,14 +19,8 @@ if ($_SESSION['nivel']==1)  {
    $sql_contratistas=mysqli_query($con,"select c.* from contratistas as c ");
 } else {    
    $sql_contratistas=mysqli_query($con,"select c.* from contratistas as c where c.mandante='".$_SESSION['mandante']."' ");
-}   
-
-
+} 
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <html translate="no">
@@ -58,6 +52,9 @@ if ($_SESSION['nivel']==1)  {
     <link href="css\plugins\ladda\ladda-themeless.min.css" rel="stylesheet">
 
     <script src="js\jquery-3.1.1.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <style>
 
@@ -535,17 +532,17 @@ function accion(valor,id,accion){
                         <div class="ibox-content">
                          <div class="row" >
                            <div class="col-lg-12"> 
-                            <input class="form-control form-control-sm m-b-xs" id="filter" placeholder="Buscar un Contrato">
-                             <div class="table-responsive">
+                            <input style="border: 1px #c0c0c0 solid" class="form-control form-control-sm m-b-xs" id="filter" placeholder="Buscar un Contrato">
+                             <div class="table-responsive mt-4">
                                      <table style="100%;"  class="table footable" data-page-size="25" data-filter="#filter">
-                                       <thead class="cabecera_tabla">
-                                        <tr style="font-size: 12px;">
-                                            <th style="width: 19%;border-right:1px #fff solid" >Nombre</th>
-                                            <th style="width: 19%;border-right:1px #fff solid" >Contratista</th>
-                                            <th style="width: 10%;border-right:1px #fff solid" >Documento</th>
-                                            <th colspan="2" style="width: 25%;text-align: center;border-right:1px #fff solid" >Trabajadores</th>
-                                            <th style="width: 12%;text-align: center;border-right:1px #fff solid" >Docs.Mensual</th>
-                                            <th colspan="2" style="width: 27%;text-align: center;border-right:1px #fff solid;font-size:12px" >Vehiculo/Maquinaria</th>          
+                                       <thead class="">
+                                        <tr style="font-size: 12px;border:1px #c0c0c0c solid">
+                                            <th style="width: 19%;" >Nombre</th>
+                                            <th style="width: 19%;" >Contratista</th>
+                                            <th style="width: 10%;" >Documento</th>
+                                            <th colspan="2" style="width: 25%;text-align: center;" >Trabajadores</th>
+                                            <!--<th style="width: 12%;text-align: center;" >Docs.Mensual</th>-->
+                                            <th colspan="2" style="width: 27%;text-align: center;" >Vehiculo/Maquinaria</th>          
                                         </tr>
                                         </thead>
                                         <tbody>
@@ -617,53 +614,51 @@ function accion(valor,id,accion){
                                                     $carpeta = 'doc/temporal/'.$mandante.'/'.$row['id_contratista'].'/contrato_'.$row['id_contrato'].'/'.$row['nombre_contrato'].'.pdf';?>
                                                                                         
                                                     <tr>
-                                                            <td style="font-size: 13px;"><?php echo $row['nombre_contrato'] ?></td>
-                                                            
-                                                            <td style="font-size: 13px;"><?php echo $row['razon_social'] ?></td>
-                                                    
-                                                            <?php // si existe acrhivo
-                                                            if (file_exists($carpeta)) { ?>
-                                                                <td><a class="text-info" title="Descargar Archivo" href="<?php echo $carpeta ?>"  style="color: blue; font-size:;" target="_blank">Contrato</a></td>
-                                                            <?php 
-                                                            } else { ?>
-                                                                <td><label>Sin Archivo</label></td>  
-                                                            <?php 
-                                                            }
-                                                        
-                                                            // sin contrato esta habilitado    
-                                                            if ($row['estado_contrato']==1) { ?>  
-                                                            
-                                                                    <?php ############## SECCION PERFIL DE CARGOS ###################################
-                                                                    if ($existe_perfiles_c!=0 ) { 
-                                                                        if ($cont_perfil!=0 ) {  
-                                                                            if ($faltan_perfiles) { ?>                                                                           
-                                                                                <td><button title="Perfiles Asignados" class="btn btn-success btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo ?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>                                                                           
-                                                                            <?php 
-                                                                            } else { ?>                                                                         
-                                                                                    <td><button title="Falta Perfiles por Asignar" class="btn btn-warning btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo ?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
-                                                                            <?php }   
-                                                                            } else { ?>                                                                        
-                                                                                    <td><button title="Sin Perfiles Asigandos" class="btn btn-danger btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
-                                                                            <?php
-                                                                            }                                                             
-                                                                    # sino hay peerfiles    
-                                                                    } else { ?>                                                                        
-                                                                                    <td><button title="Sin Perfiles Creados" class="btn btn-dark btn-xs btn-block" type="button" disabled=""><strong>PERFIL</strong></button></td>                                                                        
-                                                                    <?php 
-                                                                    }  ?>  
+                                                        <td style="font-size: 13px;"><?php echo $row['nombre_contrato'] ?></td>                                                            
+                                                        <td style="font-size: 13px;"><?php echo $row['razon_social'] ?></td>                                                    
+                                                        <?php // si existe acrhivo
+                                                        if (file_exists($carpeta)) { ?>
+                                                            <td><a class="text-info" title="Descargar Archivo" href="<?php echo $carpeta ?>"  style="color: blue; font-size:;" target="_blank">Contrato</a></td>
+                                                        <?php 
+                                                        } else { ?>
+                                                            <td><label>Sin Archivo</label></td>  
+                                                        <?php 
+                                                        }
+                                                        // sin contrato esta habilitado    
+                                                        if ($row['estado_contrato']==1) { ?>                                                              
+                                                        <?php ############## SECCION PERFIL DE CARGOS ###################################
+                                                        if ($existe_perfiles_c!=0 ) { 
+                                                            if ($cont_perfil!=0 ) {  
+                                                                if ($faltan_perfiles) { ?>                                                                           
+                                                                    <td><button title="Perfiles Asignados" class="btn btn-success btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo ?>)"><span style="font-size:10px;font-weight:bold"><strong>PERFIL</strong></span></button></td>                                                                           
+                                                                <?php 
+                                                                } else { ?>                                                                         
+                                                                    <td><button title="Falta Perfiles por Asignar" class="btn btn-warning btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo ?>)"><span style="font-size:10px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
+                                                                <?php }   
+                                                            } else { ?>                                                                        
+                                                                <td><button title="Sin Perfiles Asigandos" class="btn btn-danger btn-xs btn-block" type="button" onclick="modal_cargos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_cargo?>)"><span style="font-size:10px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
+                                                            <?php
+                                                            }                                                             
+                                                        # sino hay peerfiles    
+                                                        } else { ?>                                                                        
+                                                            <td><button title="Sin Perfiles Creados" class="btn btn-dark btn-xs btn-block" type="button" disabled=""><strong>PERFIL</strong></button></td>                                                                        
+                                                        <?php 
+                                                        }  ?>  
 
                                                                         
-                                                                    <?php ############## SECCION TRABAJADORES ######################################
-                                                                    if (empty($row['contrato_trab_asig'])) { ?>                                                                                                                
-                                                                            <!-- gestion -->     
-                                                                            <td><button  title="Gestion trabajadores" class="btn btn-xs btn-dark btn-block" disabled="" ><span style="font-size: 12px;font-weight:bold">TRABAJADOR</span></button></td>
+                                                        <?php ############## SECCION TRABAJADORES ######################################
+                                                        if (empty($row['contrato_trab_asig'])) { ?>                                                                                                                
+                                                            <!-- gestion -->     
+                                                                            <td><button  title="Gestion trabajadores" class="btn btn-xs btn-dark btn-block" disabled="" ><span style="font-size: 10px;font-weight:bold">TRABAJADOR</span></button></td>
                                                                     
                                                                 <?php } else { ?>                                                 
                                                                             <!-- gestion con --> 
-                                                                            <td><button style="background:#5635B9;border: none;" title="Gestion trabajadores" class="btn btn-xs btn-warning btn-block" onclick="gestion_contratos(<?php echo $row['id_contrato'] ?>,<?php echo $row['id_contratista'] ?>)" ><span style="font-size: 12px;font-weight:bold">TRABAJADOR</span></button></td>
+                                                                            <td><button style="background:#5635B9;border: none;" title="Gestion trabajadores" class="btn btn-xs btn-warning btn-block" onclick="gestion_contratos(<?php echo $row['id_contrato'] ?>,<?php echo $row['id_contratista'] ?>)" ><span style="font-size: 10px;font-weight:bold">TRABAJADOR</span></button></td>
                                                                 <?php } ?>
 
-                                                                <?php
+
+                                                                <!--
+                                                                    <?php
                                                                     # SECCION DOCUMENTOS MENSUALES TRABAJADORES
                                                                     if ($row['mensuales_c']==0) { ?>
                                                                             <td style="text-align:center"><input class="estilo" id="mensual" name="mensual" type="checkbox" value="1" onclick="modal_mensual(<?php echo $row['id_contratista'] ?>,<?php echo $mandante ?>,0,<?php echo $row['id_contrato'] ?>,'<?php echo $row['razon_social'] ?>','<?php echo $row['nombre_contrato'] ?>')" /></td>                                         
@@ -672,34 +667,33 @@ function accion(valor,id,accion){
                                                                             <td style="text-align:center"><input class="estilo" id="mensual" name="mensual" type="checkbox"  checked="" disabled=""  /></td>
                                                                     <?php 
                                                                     } ?>
-                                                                
+                                                                -->
                                                             
                                                                     <?php # si existen pefiles vehiculos
-                                                                    if ($existe_perfiles_v!=0 ) {  
-                                                                        if ($cont_perfil2!=0 ) {   
-                                                                            if ($faltan_perfiles_v) { ?>
-                                                                                    <td><button style="width:" title="Perfiles Asignados" class="btn btn-success btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>       
-                                                                            <?php 
-                                                                            } else { ?> 
-                                                                                    <td><button style="width:" title="Falta Perfiles por Asignar" class="btn btn-warning btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
-                                                                            <?php }   
-                                                                            } else { ?>              
-                                                                                    <td><button style="width:" title="Sin Perfiles Asigandos" class="btn btn-danger btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
-                                                                            <?php 
-                                                                            }        
-
-                                                                    } else {  ?>                
-                                                                                    <td><button style="width:" title="Sin Perfiles Creados" class="btn btn-dark btn-xs btn-block" type="button" disabled=""><span style="font-size: 12px;font-weight:bold"><strong>PERFIL</strong></span></button></td>
-                                                                    <?php 
-                                                                    }   ?>    
+                                                        if ($existe_perfiles_v!=0 ) {  
+                                                            if ($cont_perfil2!=0 ) {   
+                                                                if ($faltan_perfiles_v) { ?>
+                                                                    <td><button style="width:" title="Perfiles Asignados" class="btn btn-success btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 10px;font-weight:bold"><strong>PERFIL VEH/MAQ</strong></span></button></td>       
+                                                                <?php 
+                                                                } else { ?> 
+                                                                    <td><button style="width:" title="Falta Perfiles por Asignar" class="btn btn-warning btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 10px;font-weight:bold"><strong>PERFIL VEH/MAQ</strong></span></button></td>
+                                                                <?php }   
+                                                            } else { ?>              
+                                                                    <td><button style="width:" title="Sin Perfiles Asigandos" class="btn btn-danger btn-xs btn-block" type="button" onclick="modal_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $cont_vehiculos?>)"><span style="font-size: 10px;font-weight:bold"><strong> VEH/MAQ</strong></span></button></td>
+                                                            <?php 
+                                                            }        
+                                                        } else {  ?>                
+                                                            <td><button style="width:" title="Sin Perfiles Creados" class="btn btn-dark btn-xs btn-block" type="button" disabled=""><span style="font-size: 10px;font-weight:bold"><strong>PERFIL VEH/MAQ</strong></span></button></td>
+                                                        <?php 
+                                                        }   ?>    
 
 
                                                                 <?php if ($result_vehiculos['total']==0) { ?>                                                                                                                
                                                                             <!-- gestion -->     
-                                                                            <td><button title="Gestion Contratos" class="btn btn-xs btn-dark btn-block" disabled="" ><span style="font-size: 12px;font-weight:bold"><strong>VEH/MAQ</strong></span></button></td>                                                               
+                                                                            <td><button title="Gestion Contratos" class="btn btn-xs btn-dark btn-block" disabled="" ><span style="font-size: 10px;font-weight:bold"><strong>VEH/MAQ</strong></span></button></td>                                                               
                                                                 <?php } else { ?>                                                 
                                                                             <!-- gestion con --> 
-                                                                            <td><button style="width:;background:#5635B9;border: none" title="Gestion Contratos" class="btn btn-xs btn-warning btn-block" name="" id="" onclick="gestion_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $row['id_contratista'] ?>)" ><span style="font-size: 12px;font-weight:bold">VEHIC/MAQUI</span></button></td>
+                                                                            <td><button style="width:;background:#5635B9;border: none" title="Gestion Contratos" class="btn btn-xs btn-warning btn-block" name="" id="" onclick="gestion_vehiculos(<?php echo $row['id_contrato'] ?>,<?php echo $row['id_contratista'] ?>)" ><span style="font-size: 10px;font-weight:bold">VEHIC/MAQUI</span></button></td>
                                                                 <?php } ?>
 
                                                                 <!--
@@ -717,8 +711,8 @@ function accion(valor,id,accion){
                                                             <?php 
                                                             # si contrato No esta habilitado  
                                                             } else { ?>
-                                                                    <td><button style="" title="Perfiles Asignados" class="btn btn-dark btn-xs" type="button" disabled=""><span style="font-size: 12px;">Perfiles</span></button></td>
-                                                                    <td><button style="" title="Gestion Contratos" class="btn btn-xs btn-dark" name="" id="" disabled=""><span style="font-size: 12px;"> Gestionar</span></button></td>
+                                                                    <td><button style="" title="Perfiles Asignados" class="btn btn-dark btn-xs" type="button" disabled=""><span style="font-size: 10px;">Perfiles</span></button></td>
+                                                                    <td><button style="" title="Gestion Contratos" class="btn btn-xs btn-dark" name="" id="" disabled=""><span style="font-size: 10px;"> Gestionar</span></button></td>
                                                             <?php  
                                                             } ?>    
                                                         
@@ -754,8 +748,7 @@ function accion(valor,id,accion){
 
                                   function modal_vehiculos(contrato,cargos) {
                                       $('.body').load('selid_perfil_vehiculos.php?contrato='+contrato+'&cargos='+cargos,function(){
-                                          $('#modal_vehiculos').modal({show:true});
-                                          //$('#modal_cargos input[name=id]').val(id);
+                                          $('#modal_maquinarias').modal({show:true});
                                        });
                                   }
                                   
@@ -899,26 +892,23 @@ function accion(valor,id,accion){
                         <div class="modal inmodal" id="modal_cargos" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content animated fadeIn">
-                                     <div style="background:#e9eafb;color:#282828" class="modal-header">
+                                    <div style="background:#e9eafb;color:#282828" class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>                                           
                                             <h4 class="modal-title">Asignar Perfil a Cargos del Contrato</h4>
-                                        </div>
+                                    </div>
                                     <div class="body">
-                                       <div class="body">
-                                     
-                                           
-                                      </div>                                              
+                                    </div>                                              
                                 </div>  
                             </div>
                         </div> 
 
-                        <div class="modal inmodal" id="modal_vehiculos" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal inmodal" id="modal_maquinarias" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content animated fadeIn">                                    
                                     <div style="background:#e9eafb;color:#282828" class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>                                           
-                                            <h4 class="modal-title">Asignar Perfil a Vehículos del Contrato</h4>
-                                        </div>
+                                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>                                           
+                                        <h4 class="modal-title">Asignar Perfil a Vehículos del Contrato</h4>
+                                    </div>
                                     <div class="body">
                                     </div>                                              
                                 </div>  
@@ -980,11 +970,7 @@ function accion(valor,id,accion){
     
     <!-- Sweet alert -->
     <script src="js\plugins\sweetalert\sweetalert.min.js"></script><!-- Ladda -->
-    <script src="js\plugins\ladda\spin.min.js"></script>
-    <script src="js\plugins\ladda\ladda.min.js"></script>
-    <script src="js\plugins\ladda\ladda.jquery.min.js"></script>
-  
-
+    
 
 </body>
 </html>
