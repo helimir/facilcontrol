@@ -5,6 +5,13 @@
  */
 session_start();
 
+$url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual=$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
+
 include "../config/config.php";
 //session_destroy($_SESSION['sms']);
 
@@ -506,7 +513,7 @@ if ($_POST['accion']=="crear_contrato") {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="'.$url_actual.'add/logo_fc.png" >
                                         </td>
                                     </tr>   
                                     <tr>
@@ -526,7 +533,7 @@ if ($_POST['accion']=="crear_contrato") {
                                                 <tr>
                                                     <td class="content-block">
                                                         Ingrese a la plataforma <b>FacilControl</b> por medio del siguiente enlace:<br/>
-                                                        <a href="https://facilcontrol.cl/admin.php">Inicio de FacionControl</a>
+                                                        <a href="'.$url_actual.'admin.php">Inicio de FacionControl</a>
                                                     </td>
                                                 </tr>
                                                 <tr>

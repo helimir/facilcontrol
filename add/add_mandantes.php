@@ -6,6 +6,13 @@
 
 include "../config/config.php"; 
 
+$url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual=$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
+
 require_once('../PHPMailer/Exception.php');
 require_once('../PHPMailer/PHPMailer.php');
 require_once('../PHPMailer/SMTP.php');
@@ -397,7 +404,7 @@ if ($result>0) {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                        <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="'.$url_actual.'add/logo_fc.png" >
                                         </td>
                                     </tr>
                                     <tr>
@@ -415,7 +422,7 @@ if ($result>0) {
                                                 </tr>
                                                 <tr>
                                                     <td class="content-block">
-                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://facilcontrol.cl/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
+                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="'.$url_actual.'validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -787,7 +794,7 @@ if ($result>0) {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="'.$url_actual.'add/logo_fc.png" >
                                         </td>
                                     </tr>
                                     <tr>
@@ -805,7 +812,7 @@ if ($result>0) {
                                                 </tr>
                                                 <tr>
                                                     <td class="content-block">
-                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://facilcontrol.cl/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
+                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="'.$url_actual.'validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
