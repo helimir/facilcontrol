@@ -19,6 +19,7 @@ if (isset($_SESSION['usuario']) ) {
     
     $query_contratista=mysqli_query($con,"select razon_social, rut from contratistas where id_contratista='$contratista' ");
     $result_contratista=mysqli_fetch_array($query_contratista);
+    $rut=$result_contratista['rut'];
     
     $i=0;
     $contador=0;
@@ -93,7 +94,7 @@ if (isset($_SESSION['usuario']) ) {
                             $accion="Revisar documento de contratista";
                             $url="gestion_documentos_contratistas.php";
                            
-                            $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,documento) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$_SESSION['mandante']."','$contratista','$nom_documento','$nom_documento') ");
+                            $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,documento,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$_SESSION['mandante']."','$contratista','$nom_documento','$nom_documento','$rut') ");
                            
                             $url2='doc/temporal/'.$_SESSION['mandante'].'/'.$contratista.'/'.$nombre;        
                             mysqli_query($con,"insert into doc_subidos_contratista (documento,contratista,mandante,url,id_documento,creado) values ('$nom_documento','$contratista','$mandante','$url2','".$doc[$i]."','$date') ");                                

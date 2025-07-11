@@ -4,6 +4,7 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 
 if (isset($_SESSION['usuario'])) { 

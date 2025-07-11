@@ -33,8 +33,8 @@ function make_date(){
 
 $fecha =make_date();
 
-$contratista=$_POST['contratista'];
-$nombre_contrato=$_POST['nombre_contrato'];
+$contratista=$_POST['contratista'] ?? '';
+$nombre_contrato=$_POST['nombre_contrato'] ?? '';
 $cargos=serialize(json_decode(stripslashes($_POST['cargos'])));
 $vehiculos=serialize(json_decode(stripslashes($_POST['vehiculos'])));
 
@@ -43,7 +43,7 @@ $vehiculos=serialize(json_decode(stripslashes($_POST['vehiculos'])));
 
 
 if ($_SESSION['nivel']==1)  {  
-    $mandante=$_POST['mandante'];
+    $mandante=$_POST['mandante'] ?? '';
 } else {    
     $mandante=$_SESSION['mandante'];
     $sql_mandante=mysqli_query($con,"select * from mandantes where id_mandante='$mandante'  ");
@@ -61,15 +61,16 @@ if ($_POST['accion']=="crear_contrato") {
         # obtener informacion de la contratista
         $sql_contratista=mysqli_query($con,"select * from contratistas where id_contratista='".$contratista."'  ");
         $result=mysqli_fetch_array($sql_contratista);    
+        $rut=$result['rut'];
         
         # obtenet notificacion de Crear Trabajadores
         $sql_n=mysqli_query($con,"select * from notificaciones where contratista='$contratista' and item='Crear Trabajadores' ");
         $result_n=mysqli_fetch_array($sql_n); 
                
-        $sql_contrato=mysqli_query($con,"insert into contratos (contratista,nombre_contrato,cargos,creado_contrato,mandante,vehiculos) values ('$contratista','$nombre_contrato','$cargos','$date','$mandante','$vehiculos') ");
+        $sql_contrato=mysqli_query($con,"insert into contratos (contratista,nombre_contrato,cargos,creado_contrato,mandante,vehiculos,rut) values ('$contratista','$nombre_contrato','$cargos','$date','$mandante','$vehiculos','$rut') ");
         
         // seleccionar ultimo id de contratos
-        $query_idcontrato =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'contratos' ");
+        $query_idcontrato =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'contratos' ");
         $result_idcontrato= mysqli_fetch_array($query_idcontrato); 
         $idcontrato=$result_idcontrato['AUTO_INCREMENT']-1;
         
@@ -113,7 +114,7 @@ if ($_POST['accion']=="crear_contrato") {
                     $mensaje="Debe crear perfiles de cargos para los contratos.";
                     $accion="Crear perfiles de cargo";
                     $url="crear_perfil.php";
-                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante') ");
+                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$rut') ");
                 } 
 
                 if ($result_perfiles_v['cant_perfiles']==0) {
@@ -126,7 +127,7 @@ if ($_POST['accion']=="crear_contrato") {
                     $mensaje="Debe crear perfiles de vehículos/maquinarias para los contratos.";
                     $accion="Crear perfiles de cargo";
                     $url="crear_perfil_vehiculos.php";
-                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante') ");
+                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$rut') ");
                 }
                 
                 // notificacion asignar perfiles a contrato
@@ -138,7 +139,7 @@ if ($_POST['accion']=="crear_contrato") {
                 $mensaje="Debe asignar perfiles de cargos al contrato <b>$nombre_contrato</b>";
                 $accion="Asignar perfiles de cargo";
                 $url="list_contratos.php";
-                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$idcontrato','$mandante','$idcontrato') "); 
+                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$idcontrato','$mandante','$idcontrato','$rut') "); 
 
                  // notificacion asignar perfiles a contrato
                  $item='Asignar Perfiles Vehiculos'; 
@@ -149,7 +150,7 @@ if ($_POST['accion']=="crear_contrato") {
                  $mensaje="Debe asignar perfiles de vehiculos/maquinarias al contrato <b>$nombre_contrato</b>";
                  $accion="Asignar perfiles de cargo";
                  $url="list_contratos.php";
-                 mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$idcontrato','$mandante','$idcontrato') "); 
+                 mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$idcontrato','$mandante','$idcontrato','$rut') "); 
                 
                  // seleccionar id de notificacion
                 $query_noti =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'notificaciones' ");
@@ -177,7 +178,7 @@ if ($_POST['accion']=="crear_contrato") {
                     $mensaje="Debe crear trabajadores para asignar a los contratos.";
                     $accion="Crear trabajadores";
                     $url="crear_trabajador.php";
-                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista') ");
+                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$rut') ");
                 }
 
                 if ($result_vehi['cant_autos']==0) {
@@ -189,7 +190,7 @@ if ($_POST['accion']=="crear_contrato") {
                     $mensaje="Debe crear vehhículos/maquinarias para asignar a los contratos.";
                     $accion="Crear vehiculos";
                     $url="crear_auto.php";
-                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista') ");
+                    mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$rut') ");
                 }
 
                 $item='Asignar Trabajadores';
@@ -200,7 +201,7 @@ if ($_POST['accion']=="crear_contrato") {
                 $mensaje="Debe asignar trabajadores al contrato <b>$nombre_contrato</b> del mandante <b>$nom_mandante</b>.";
                 $accion="Crear trabajadores";
                 $url="list_contratos_contratistas.php";
-                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$idcontrato','$idcontrato') ");
+                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$idcontrato','$idcontrato','$rut') ");
 
                 $item='Asignar Vehiculos';
                 $nivel=2;
@@ -210,7 +211,7 @@ if ($_POST['accion']=="crear_contrato") {
                 $mensaje="Debe asignar vehiculo/maquinaria al contrato <b>$nombre_contrato</b> del mandante <b>$nom_mandante</b>.";
                 $accion="Crear trabajadores";
                 $url="list_contratos_contratistas.php";
-                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$idcontrato','$idcontrato') ");
+                mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,mandante,contratista,control,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','$mandante','$contratista','$idcontrato','$idcontrato','$rut') ");
                 
                 
                 $correo=$result['email'];
@@ -505,7 +506,7 @@ if ($_POST['accion']=="crear_contrato") {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
                                         </td>
                                     </tr>   
                                     <tr>
@@ -525,7 +526,7 @@ if ($_POST['accion']=="crear_contrato") {
                                                 <tr>
                                                     <td class="content-block">
                                                         Ingrese a la plataforma <b>FacilControl</b> por medio del siguiente enlace:<br/>
-                                                        <a href="https://'.$result_config['url'].'/admin.php">Inicio de FacionControl</a>
+                                                        <a href="https://facilcontrol.cl/admin.php">Inicio de FacionControl</a>
                                                     </td>
                                                 </tr>
                                                 <tr>

@@ -1,4 +1,5 @@
 <?php
+include('sesion_manager.php');
 session_start();
 if (isset($_SESSION['usuario']) and $_SESSION['nivel']==2) { 
     
@@ -216,7 +217,7 @@ $year=date('Y');
                                      <?php $i=0; foreach ($sql_doc as $row) {    
                                             if ($row['documento']!="Foto del vehiculo") { ?>
                                        <tr>                                          
-                                            <td><input class="form-control" id="doc_perfil<?php echo $i ?>"  name="doc[]" type="checkbox" value="<?php echo $i ?>" onclick="sel_doc(<?php echo $i ?>)" /> </td>
+                                            <td><input class="form-control" id="doc_perfil<?php echo $i ?>"  name="doc[]" type="checkbox" value="<?php echo $row['id_vdoc'] ?>" onclick="sel_doc(<?php echo $i ?>)" /> </td>
                                             <td><label id="doc<?php echo $i ?>" class="col-form-label"><?php echo $row['documento'] ?></label></td>
                                        </tr>
                                     <?php } 

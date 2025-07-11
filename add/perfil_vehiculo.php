@@ -37,7 +37,7 @@ if ($result>0) {
     }   
         
 } else {    
-     
+
     # agregar a perfiles cargos
     $add=mysqli_query($con,"insert into perfiles_vehiculos (perfiles,vehiculos,mandante,contrato,creado) values ('$lista_perfil','$cargos','$mandante','$contrato','$date') ");
     

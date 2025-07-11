@@ -68,7 +68,7 @@ if (isset($_SESSION['usuario']) ) {
                             $item='Foto Trabajador Recibido';                 
                             $nivel=3;
                             $tipo=2;
-                            $envia=$contratista;
+                            $envia=$contratista; 
                             $recibe=$mandante;
                             $mensaje="El contratista <b>$nom_contratista</b> adjunto la foto del trabajador <b>$nom_trabajador</b>, contrato <b>$nom_contrato</b> para ser revisada.";
                             $usuario=$_SESSION['usuario'];

@@ -1,11 +1,7 @@
 <?php
 session_start();
-error_reporting(-1);
 if (isset($_SESSION['usuario']) ) {    
     include('../config/config.php');
-
-    $query_config=mysqli_query($con,"select * from configuracion ");
-    $result_config=mysqli_fetch_array($query_config);
 
     date_default_timezone_set('America/Santiago');
     $date = date('Y-m-d');
@@ -17,14 +13,13 @@ if (isset($_SESSION['usuario']) ) {
     
     $mesyyear=$mes.'_'.$year;
               
-    $usuario=$_SESSION['usuario'];          
-    $contratista=$_SESSION['contratista'];
-    
-    $rut=$_POST['rut'];
-    $idtrabajador=$_POST['trabajador'];
+    $usuario=$_SESSION['usuario'] ?? '';          
+    $contratista=$_SESSION['contratista'] ?? '';
+        
+    $idtrabajador=$_POST['trabajador'] ?? '';
     $tipo=$_POST['tipo'];  
    
-    $contrato=$_POST['contrato'];
+    $contrato=$_POST['contrato'] ?? '';
 
         
     # obtener extension de archivo  
@@ -38,6 +33,7 @@ if (isset($_SESSION['usuario']) ) {
 
     $query_con=mysqli_query($con,"select * from contratistas where id_contratista='".$contratista."' ");
     $result_con=mysqli_fetch_array($query_con);
+    $rut=$result_con['rut'];
             
     $query_ta=mysqli_query($con,"select * from trabajadores_acreditados where trabajador='$idtrabajador' and contratista='$contratista' and estado=0  ");
     $result_ta=mysqli_fetch_array($query_ta);
@@ -96,6 +92,10 @@ if (isset($_SESSION['usuario']) ) {
                         
                         for ($cont=0;$cont<=$acreditados-1;$cont++) {
 
+                            $query_man=mysqli_query($con,"select rut_empresa from mandantes where id_mantante='".$lista_mandantes[$cont]."' ");
+                            $result_man=mysqli_fetch_assoc($query_man);
+                            $rut_man=$result_man['rut_empresa'];
+
                             # seleccionar nombre del contrato correspondinte al mandante
                             $query_o=mysqli_query($con,"select nombre_contrato from contratos where id_contrato='".$lista_contratos[$cont]."' and mandante='".$lista_mandantes[$cont]."' ");
                             $result_o=mysqli_fetch_array($query_o);
@@ -105,10 +105,10 @@ if (isset($_SESSION['usuario']) ) {
                             $existe_desvinculacion=mysqli_num_rows($query_ed);
 
                             if ($existe_desvinculacion==0) {
-                                $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,contrato) values ('$idtrabajador','".$lista_mandantes[$cont]."','$contratista','$date','$usuario','$tipo','".$lista_contratos[$cont]."') ");
+                                $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,contrato,rut) values ('$idtrabajador','".$lista_mandantes[$cont]."','$contratista','$date','$usuario','$tipo','".$lista_contratos[$cont]."','$rut') ");
                                 
                                 // seleccionar ultimo id de desvinculacion
-                                $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'desvinculaciones' ");
+                                $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'desvinculaciones' ");
                                 $result_id_d= mysqli_fetch_array($query_id_d); 
                                 $id_d=$result_id_d['AUTO_INCREMENT']-1;
                                 
@@ -121,7 +121,7 @@ if (isset($_SESSION['usuario']) ) {
                                 $mensaje="El contratista <b>".$result_con['razon_social']."</b> ha enviado la desvinculacion del trabajador <b>".$trabajador."</b> vinculado al contrato <b>".$nombre_contrato."</b>.";
                                 $accion="Revisar Documento";
                                 $url="desvinculaciones_mandante.php";
-                                $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,control,mandante,contratista,tipo,documento,trabajador,url,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$id_d','".$lista_mandantes[$cont]."','$contratista','$tipo','$nombre','$idtrabajador','$url','".$lista_contratos[$cont]."') ");
+                                $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,control,mandante,contratista,tipo,documento,trabajador,url,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$id_d','".$lista_mandantes[$cont]."','$contratista','$tipo','$nombre','$idtrabajador','$url','".$lista_contratos[$cont]."','$rut_man') ");
                             }    
                         };        
                         
@@ -137,12 +137,15 @@ if (isset($_SESSION['usuario']) ) {
         # si esta en un solo contrato        
         } else {
 
+            $mandante=$_POST['mandante'] ?? '';
+            $query_man=mysqli_query($con,"select rut_empresa from mandantes where id_mantante='$mandante' ");
+            $result_man=mysqli_fetch_assoc($query_man);
+            $rut_man=$result_man['rut_empresa'];
+            
             # seleccionar nombre del contrato correspondinte al mandante
             $query_o=mysqli_query($con,"select nombre_contrato from contratos where id_contrato='".$contrato."' and mandante='".$mandante."' ");
             $result_o=mysqli_fetch_array($query_o);
             $nombre_contrato=$result_o['nombre_contrato'];
-
-            $mandante=$_POST['mandante'];
 
             $trabajador=$result_t['nombre1'].' '.$result_t['apellido1'];
             $contrato=$result_ta['contrato'];
@@ -154,10 +157,10 @@ if (isset($_SESSION['usuario']) ) {
 
             if (@move_uploaded_file($_FILES["archivo_desvincular"]["tmp_name"], $archivo)) {
 
-                $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,contrato) values ('$idtrabajador','$mandante','$contratista','$date','$usuario','$tipo','$contrato') ");
+                $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,contrato,rut) values ('$idtrabajador','$mandante','$contratista','$date','$usuario','$tipo','$contrato','$rut') ");
                 
                 // seleccionar ultimo id de desvinculacion
-                $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'desvinculaciones' ");
+                $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'desvinculaciones' ");
                 $result_id_d= mysqli_fetch_array($query_id_d); 
                 $id_d=$result_id_d['AUTO_INCREMENT']-1;
 
@@ -170,7 +173,7 @@ if (isset($_SESSION['usuario']) ) {
                 $mensaje="El contratista <b>".$result_con['razon_social']."</b> ha enviado la desvinculacion del trabajador <b>".$trabajador."</b> vinculado al contrato <b>".$nombre_contrato."</b>.";
                 $accion="Revisar Documento";
                 $url="desvinculaciones_mandante.php";
-                $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,control,mandante,contratista,tipo,documento,trabajador,contrato) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','".$id_d."','".$mandante."','".$contratista."','$tipo','".$nombre."','$idtrabajador','$contrato') ");
+                $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,control,mandante,contratista,tipo,documento,trabajador,contrato,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','".$id_d."','".$mandante."','".$contratista."','$tipo','".$nombre."','$idtrabajador','$contrato','$rut') ");
                 
                 $query_d=mysqli_query($con,"update trabajador set estado=1 where trabajador='$idtrabajador' and contratista='$contratista'  ");
                 $query_tac=mysqli_query($con,"update trabajadores_acreditados set estado=1 where trabajador='$idtrabajador'  ");
@@ -187,8 +190,9 @@ if (isset($_SESSION['usuario']) ) {
     if ($tipo==2) {
                 
                 $mandante=$_POST['mandante']; 
-                #$prueba=mysqli_query($con,"insert into prueba (valor) values ('".$_POST['mandante']."') ");
-
+                $query_man=mysqli_query($con,"select rut_empresa from mandantes where id_mantante='$mandante' ");
+                $result_man=mysqli_fetch_assoc($query_man);
+                $rut_man=$result_man['rut_empresa'];
 
                 $trabajador=$result_t['nombre1'].' '.$result_t['apellido1'];
             
@@ -207,10 +211,10 @@ if (isset($_SESSION['usuario']) ) {
 
                 if (@move_uploaded_file($_FILES["archivo_desvincular"]["tmp_name"], $archivo)) {
 
-                    $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,url,contrato) values ('$idtrabajador','$mandante','$contratista','$date','$usuario','$tipo','$url_d','$contrato') ");
+                    $query=mysqli_query($con,"insert into desvinculaciones (trabajador,mandante,contratista,creado,usuario,tipo,url,contrato,rut) values ('$idtrabajador','$mandante','$contratista','$date','$usuario','$tipo','$url_d','$contrato','$rut') ");
                     
                     // seleccionar ultimo id de desvinculacion
-                    $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'desvinculaciones' ");
+                    $query_id_d =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'desvinculaciones' ");
                     $result_id_d= mysqli_fetch_array($query_id_d); 
                     $id_d=$result_id_d['AUTO_INCREMENT']-1;
 
@@ -223,7 +227,7 @@ if (isset($_SESSION['usuario']) ) {
                     $mensaje="El contratista <b>".$result_con['razon_social']."</b> ha enviado la desvinculacion del trabajador <b>".$trabajador."</b> del Contrato <b>".$result_cont['nombre_contrato']."</b>.";
                     $accion="Revisar Documento";
                     $url="desvinculaciones_mandante.php";
-                    $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,control,mandante,contratista,tipo,contrato,documento,trabajador) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','".$id_d."','".$mandante."','".$contratista."','$tipo','".$contrato."','".$nombre."','$idtrabajador') ");
+                    $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,control,mandante,contratista,tipo,contrato,documento,trabajador,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','".$id_d."','".$mandante."','".$contratista."','$tipo','".$contrato."','".$nombre."','$idtrabajador','$rut_man') ");
                     #$query_d=mysqli_query($con,"update trabajadores_asignados set estado=1 where trabajadores='$idtrabajador' and contrato='$contrato'  ");
                     $query_tac=mysqli_query($con,"update trabajadores_acreditados set estado=1 where trabajador='$idtrabajador' and contrato='$contrato'  ");
                     $query_tag=mysqli_query($con,"update trabajadores_asignados set estado=1 where trabajadores='$idtrabajador' and contrato='$contrato'  ");

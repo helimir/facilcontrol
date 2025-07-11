@@ -3,8 +3,8 @@ session_start();
 error_reporting(-1);
 if (isset($_SESSION['usuario']) ) {    
     include('../config/config.php');
-    $mandante=$_POST['mandante'];
-    $rut=$_POST['rut'];
+    $mandante=$_POST['mandante'] ?? '';
+    $rut=$_POST['rut'] ?? '';
     
     $image = getimagesize($_FILES["foto"]["tmp_name"]);
     $maximum = array(

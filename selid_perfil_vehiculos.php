@@ -96,7 +96,7 @@ $num_cargos=$_GET['cargos']; ?>
                                             <input type="hidden" name="perfil_lista[]" id="perfil_lista-<?php echo $id ?>" value="<?php echo $perfiles[$id]  ?>" />
 
                                 <?php        $asignado++;
-                                      } ?>   
+                                      } ?>    
                                
                              </tr> 
                            

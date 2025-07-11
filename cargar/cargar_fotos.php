@@ -1,10 +1,9 @@
 <?php
 session_start();
-error_reporting(-1);
 if (isset($_SESSION['usuario']) ) {    
     include('../config/config.php');
-    $contratista=$_POST['contratista'];
-    $rut=$_POST['rut'];
+    $contratista=$_POST['contratista'] ?? '';
+    $rut=$_POST['rut'] ?? '';
     
     $image = getimagesize($_FILES["foto"]["tmp_name"]);
     $maximum = array(

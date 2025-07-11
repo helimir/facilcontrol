@@ -1,4 +1,5 @@
 <?php
+include('sesion_manager.php');
 session_start();
 if (isset($_SESSION['usuario']) ) { 
     

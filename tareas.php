@@ -3,6 +3,7 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 
 if (isset($_SESSION['usuario']) ) { 
@@ -111,9 +112,9 @@ if ($_SESSION['mandante']==0) {
                         <div class="ibox-content">
 
                         <?php include('resumen.php') ?>
-                           <input class="form-control form-control-sm m-b-xs" id="filter" placeholder="Buscar..."> 
+                           <input style="border:1px #c0c0c0 solid" class="form-control form-control-sm m-b-xs mt-3" id="filter" placeholder="Buscar..."> 
                            <div class="table-responsive">
-                            <table style="width:100%;overflow-x: auto;" class="table footable table-hover" data-page-size="30" data-filter="#filter">
+                            <table style="width:100%;overflow-x: auto;" class="table footable table-hover mt-3" data-page-size="30" data-filter="#filter">
                                 
                             
                                 <tbody>

@@ -74,12 +74,11 @@ if ($_SESSION['nivel']==1) {
                                                 if ($cant_gestion_doc_contratista==0) { ?>
                                                     <div class="widget style1 navy-bg">
                                                         <div class="row ">                                                             
-                                                            <div class="col-4 text-center">
-                                                                <i class="fa fa-list fa-4x"></i>
+                                                            <div class="col-2 text-center">
+                                                                <h2 class="font-bold">0</h2>
                                                             </div>
-                                                            <div class="col-8 text-right">
-                                                                <span style="font-size:16px;font-weight:bold">Contratista</span>
-                                                                <h2 class="font-bold"><?php echo 0 ?></h2>
+                                                            <div class="col-10 text-right">
+                                                                <span style="font-size:16px;font-weight:bold">Tareas asociadas a la <br>Contratista</span>
                                                             </div>                                                                                                                        
                                                         </div>   
                                                     </div>
@@ -88,12 +87,11 @@ if ($_SESSION['nivel']==1) {
                                                     <a class="enlace_resumen" href="#" onclick="modal_contratistas(1)"> 
                                                         <div class="widget fila style1 navy-bg">
                                                                 <div class="row ">                                                             
-                                                                    <div class="col-4 text-center">
-                                                                        <i class="fa fa-list fa-4x"></i>
-                                                                    </div>
-                                                                    <div class="col-8 text-right">
-                                                                        <span style="font-size:16px;font-weight:bold">Contratista</span>
+                                                                    <div class="col-2 text-center">
                                                                         <h2 class="font-bold"><?php echo $cant_gestion_doc_contratista ?></h2>
+                                                                    </div>
+                                                                    <div class="col-10 text-right">
+                                                                        <span style="font-size:16px;font-weight:bold">Tareas asociadas a la <br>Contratista</span>                                                                        
                                                                     </div>                                                                                                                        
                                                                 </div>   
                                                         </div>
@@ -106,12 +104,11 @@ if ($_SESSION['nivel']==1) {
                                                 if ($cant_gestion_doc_trabajador==0) { ?>
                                                     <div class="widget style1 navy-bg">
                                                         <div class="row ">                                                             
-                                                            <div class="col-4 text-center">
-                                                                <i class="fa fa-list fa-4x"></i>
+                                                            <div class="col-2 text-center">
+                                                                <h2 class="font-bold">0</h2>
                                                             </div>
-                                                            <div class="col-8 text-right">
-                                                                <span style="font-size:16px;font-weight:bold">Trabajadores</span>
-                                                                <h2 class="font-bold"><?php echo 0 ?></h2>
+                                                            <div class="col-10 text-right">
+                                                                <span style="font-size:16px;font-weight:bold">Tareas asociada a los <br>Trabajadores</span>
                                                             </div>                                                                                                                        
                                                         </div>   
                                                     </div>
@@ -120,12 +117,11 @@ if ($_SESSION['nivel']==1) {
                                                     <a class="enlace_resumen" href="#" onclick="modal_trabajadores(2)"> 
                                                         <div class="widget fila style1 navy-bg">
                                                                 <div class="row ">                                                             
-                                                                    <div class="col-4 text-center">
-                                                                        <i class="fa fa-list fa-4x"></i>
-                                                                    </div>
-                                                                    <div class="col-8 text-right">
-                                                                        <span style="font-size:16px;font-weight:bold">Trabajadores</span>
+                                                                    <div class="col-2 text-center">
                                                                         <h2 class="font-bold"><?php echo $cant_gestion_doc_trabajador ?></h2>
+                                                                    </div>
+                                                                    <div class="col-10 text-right">
+                                                                        <span style="font-size:16px;font-weight:bold">Tareas asociada a los <br>Trabajadores</span>                                                                        
                                                                     </div>                                                                                                                        
                                                                 </div>   
                                                         </div>
@@ -138,12 +134,11 @@ if ($_SESSION['nivel']==1) {
                                                 if ($cant_gestion_doc_vehiculo==0) { ?>
                                                     <div class="widget style1 navy-bg">
                                                         <div class="row ">                                                             
-                                                            <div class="col-4 text-center">
-                                                                <i class="fa fa-list fa-4x"></i>
+                                                            <div class="col-2 text-center">
+                                                                <h2 class="font-bold">0</h2>
                                                             </div>
-                                                            <div class="col-8 text-right">
-                                                                <span style="font-size:16px;font-weight:bold">Vehículos</span>
-                                                                <h2 class="font-bold"><?php echo 0 ?></h2>
+                                                            <div class="col-10 text-right">
+                                                                <span style="font-size:16px;font-weight:bold">Tareas asociadas a <br>Vehículos/Maquinarias</span>
                                                             </div>                                                                                                                        
                                                         </div>   
                                                     </div>
@@ -152,12 +147,11 @@ if ($_SESSION['nivel']==1) {
                                                     <a class="enlace_resumen" href="#" onclick="modal_vehiculos_r(3)"> 
                                                         <div class="widget fila style1 navy-bg">
                                                                 <div class="row ">                                                             
-                                                                    <div class="col-4 text-center">
-                                                                        <i class="fa fa-list fa-4x"></i>
-                                                                    </div>
-                                                                    <div class="col-8 text-right">
-                                                                        <span style="font-size:16px;font-weight:bold">Vehículos</span>
+                                                                    <div class="col-2 text-center">
                                                                         <h2 class="font-bold"><?php echo $cant_gestion_doc_vehiculo ?></h2>
+                                                                    </div>
+                                                                    <div class="col-10 text-right">
+                                                                        <span style="font-size:16px;font-weight:bold">Tareas asociadas a <br>Vehículos/Maquinarias</span>                                                                        
                                                                     </div>                                                                                                                        
                                                                 </div>   
                                                         </div>
@@ -203,21 +197,21 @@ if ($_SESSION['nivel']==1) {
 
                                 function modal_contratistas(opcion) {
                                         $('.body').load('sel/selid_resumen_contratistas.php?opcion='+opcion,function(){
-                                            document.getElementById("titulo").innerHTML="Documentos Contratista Pendientes";
+                                            document.getElementById("titulo").innerHTML="Tareas asociadas a la Contratista";
                                             $('#modal_contratistas').modal('show');
                                     });
                                 }
 
                                 function modal_trabajadores(opcion) {
                                         $('.body').load('sel/selid_resumen_contratistas.php?opcion='+opcion,function(){
-                                            document.getElementById("titulo").innerHTML="Documentos Trabajadores Pendientes";
+                                            document.getElementById("titulo").innerHTML="Tareas asociadas a los Trabajadores";
                                             $('#modal_contratistas').modal('show');
                                     });
                                 }
 
                                 function modal_vehiculos_r(opcion) {
                                         $('.body').load('sel/selid_resumen_contratistas.php?opcion='+opcion,function(){
-                                            document.getElementById("titulo").innerHTML="Documentos Vehículos Pendientes";
+                                            document.getElementById("titulo").innerHTML="Tareas asociadas a los Vehiculos/Maquinarias";
                                             $('#modal_contratistas').modal('show');
 
                                     });

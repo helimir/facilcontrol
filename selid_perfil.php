@@ -98,7 +98,7 @@ $num_cargos=$_GET['cargos']; ?>
                      <?php $id++; } ?>  
                 </tbody>                
               </table>              
-            </div> 
+            </div>
          </div>         
          
    

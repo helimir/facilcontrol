@@ -5,19 +5,19 @@ if (isset($_SESSION['usuario']) ) {
     date_default_timezone_set('America/Santiago');
     $date = date('Y-m-d H:m:s', time());
               
-        $trabajador=$_POST["trabajador"];
-        $com=$_POST["com"];          
-        $condicion=$_POST["condicion"];
-        $documento=$_POST["documento"];
+        $trabajador=$_POST["trabajador"] ?? '';
+        $com=$_POST["com"] ?? '';          
+        $condicion=$_POST["condicion"] ?? '';
+        $documento=$_POST["documento"] ?? '';
         
         #$contratista=$_POST["contratista"];
         #$mandante=$_POST["mandante"];
         #$contrato=$_POST["contrato"];
         
-        $contratista=$_SESSION['contratista'];
-        $mandante=$_SESSION['mandante'];
-        $contrato=$_SESSION["contrato"];          
-        $usuario=$_SESSION['usuario'];
+        $contratista=$_SESSION['contratista'] ?? '';
+        $mandante=$_SESSION['mandante'] ?? '';
+        $contrato=$_SESSION["contrato"] ?? '';          
+        $usuario=$_SESSION['usuario'] ?? '';
                
         $query=mysqli_query($con,"select * from doc where id_doc='$documento' ");
         $result=mysqli_fetch_array($query);

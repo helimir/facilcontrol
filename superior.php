@@ -100,7 +100,7 @@ if ($_SESSION['nivel']==2) {
                     </ul>-->
                 </li>
                 
-                <li style="background: #7285A8;">
+                <li style="background: #010829;">
                     <a style="color:#fff" href="logout.php">
                         <i class="fa fa-sign-out"></i> Salir
                     </a>

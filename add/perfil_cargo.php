@@ -25,7 +25,7 @@ $lista_perfil=serialize($lista);
 
 # si hay perfil_cargos 
 if ($result>0) {
-   
+    
     $add=mysqli_query($con,"update perfiles_cargos set perfiles='$lista_perfil', cargos='$cargos', editado='$date' where contrato='$contrato'  ");
     $add2=mysqli_query($con,"update contratos set perfiles='$lista_perfil', cargos='$cargos', editado_contrato='$date' where id_contrato='$contrato'  ");
     mysqli_query($con,"delete from notificaciones where item='Asignar Perfiles Cargos' and contrato='$contrato'  ");

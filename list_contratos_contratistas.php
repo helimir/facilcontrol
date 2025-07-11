@@ -3,6 +3,7 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 include('config/config.php');
 $contratista=$_SESSION['contratista'];
@@ -36,7 +37,11 @@ if (isset($_SESSION['usuario']) and $_SESSION['nivel']==3  ) {
     $mes=date('m');
     $year=date('Y');
 
-    $sql_contratos=mysqli_query($con,"select  c.*, m.* from contratos as c LEFT JOIN mandantes as m ON m.id_mandante=c.mandante where c.contratista='$contratista'  ");
+    if ($_SESSION['dualidad']==0) {
+      $sql_contratos=mysqli_query($con,"SELECT  c.*, m.* from contratos as c LEFT JOIN mandantes as m ON m.id_mandante=c.mandante where c.contratista='$contratista'  ");
+    } else {
+      $sql_contratos=mysqli_query($con,"SELECT  c.*, m.* from contratos as c LEFT JOIN mandantes as m ON m.id_mandante=c.mandante  where c.rut='".$_SESSION['usuario']."'  ");
+    }
 ?>
 
 <!DOCTYPE html>
@@ -291,7 +296,7 @@ function accion(valor,id,accion){
        
             <div style="" class="row wrapper white-bg ">
                 <div class="col-lg-10">
-                    <h2 style="color: #010829;font-weight: bold;">Reporte de Contratos <?php  #echo $_SESSION['usuario'].'-'.$_SESSION['nivel'].'-'.$_SESSION['contratista'].'-'.$_SESSION['mandante'] ?> </h2> 
+                    <h2 style="color: #010829;font-weight: bold;">Reporte de Contratos <?php ?> </h2> 
                     
                 </div>
             </div>
@@ -318,7 +323,7 @@ function accion(valor,id,accion){
                             <br>
                             <div class="table-responsive">
                                 <table class="table footable " data-page-size="25" data-filter="#filter">
-                                   <thead class="cabecera_tabla">
+                                   <thead class="">
                                     <tr>
                                         <th style="width: 5%;border-right:1px #fff solid"></th>
                                         <th style="width: 25%;border-right:1px #fff solid">CONTRATO</th>
@@ -365,27 +370,31 @@ function accion(valor,id,accion){
                                             <!-- creado
                                             <td><?php echo substr($creado,0,10) ?></td> -->
                                             
-                                                <?php 
-                                                   if ($contratos_sin_perfiles_i[$j]==$row['id_contrato'])  { ?>
-                                                            <td><button  title="Contrato sin Perfil asignado" class="btn btn-xs btn-dark btn-block" name="" id=""  ><span style="font-size: 12px;font-weight:bold;">SIN PERFIL</span></button></td> 
                                                   <?php 
+                                                  #si el contrato no tiene perfil de cargos
+                                                  if ($contratos_sin_perfiles_i[$j]==$row['id_contrato'])  { ?>
+                                                        <td><button  title="Contrato sin Perfil asignado" class="btn btn-xs btn-dark btn-block" name="" id=""  ><span style="font-size: 12px;font-weight:bold;">SIN PERFIL</span></button></td> 
+                                                  <?php 
+                                                  #si el contrato si tiene perfil de cargos
                                                   } else { ?>
-                                                            <td><button  title="Asignar Trabajadores" class="btn btn-xs btn-success btn-block" name="" id="" onclick="gestion_t(<?php echo $row['id_mandante'] ?>,<?php echo $row['id_contrato']?>,2)" ><span style="font-size: 12px;">ASIGNAR </span></button></td> 
+                                                        <td><button  title="Asignar Trabajadore" class="btn btn-xs btn-success btn-block" name="" id="" onclick="gestion_t(<?php echo $row['id_mandante'] ?>,<?php echo $row['id_contrato']?>,2)" ><span style="font-size: 12px;">ASIGNAR </span></button></td> 
                                                   <?php 
                                                   }   
-                                                    if ($result_ta['total']>0) { ?>                                                         
-                                                            <td style="border-right:1px #eee solid"><button style="background:#5635B9;border: none;"  title="Trabajadores Asignados" class="btn btn-xs btn-primary btn-block" name="" id="" onclick="gestion_t(<?php echo $row['id_mandante'] ?>,<?php echo $row['id_contrato']?>,1)" ><span style="font-size: 12px;">TRABAJADORES  (<?php echo $result_ta['total'] ?>) </span></button></td>
-                                                    <?php 
-                                                    } else {     
-                                                          if ($contratos_sin_perfiles_i[$j]==$row['id_contrato'] ) { ?>
-                                                              <td><button  title="Contrato sin Perfil asignado" class="btn btn-xs btn-dark btn-block" name="" id=""  ><span style="font-size: 12px;font-weight:bold;">SIN PERFIL</span></button></td> 
-                                                          <?php 
-                                                          } else { ?>      
-                                                              <td style="border-right:1px #eee solid"><button  title="Trabajadores No Asignados" class="btn btn-xs btn-secondary btn-block" name="" id="" ><span style="font-size: 12px;">GESTIONAR</button></td>
-                                                          <?php 
-                                                          }  ?>
-                                                    <?php 
-                                                    }   
+                                                  #trabajadores asignados
+                                                  if ($result_ta['total']>0) { ?>                                                         
+                                                        <td style="border-right:1px #eee solid"><button style="background:#5635B9;border: none;"  title="Trabajadores Asignados" class="btn btn-xs btn-primary btn-block" name="" id="" onclick="gestion_t(<?php echo $row['id_mandante'] ?>,<?php echo $row['id_contrato']?>,1)" ><span style="font-size: 12px;">TRABAJADORES  (<?php echo $result_ta['total'] ?>) </span></button></td>
+                                                  <?php 
+                                                  } else {     
+                                                      #contratos sin perfil
+                                                      if ($contratos_sin_perfiles_i[$j]==$row['id_contrato'] ) { ?>
+                                                        <td><button  title="Contrato sin Perfil asignado" class="btn btn-xs btn-dark btn-block" name="" id=""  ><span style="font-size: 12px;font-weight:bold;">SIN PERFIL</span></button></td> 
+                                                      <?php 
+                                                      } else { ?>      
+                                                        <td style="border-right:1px #eee solid"><button  title="Trabajadores No Asignados" class="btn btn-xs btn-secondary btn-block" name="" id="" ><span style="font-size: 12px;">GESTIONAR</button></td>
+                                                      <?php 
+                                                      }  ?>
+                                                  <?php 
+                                                  }   
 
                                                     # vehiculos                                                  
                                                     if (isset($contratos_sin_perfiles_i_v[$j])==isset($row['id_contrato']) ) { ?>

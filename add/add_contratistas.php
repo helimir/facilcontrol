@@ -16,9 +16,6 @@ $mail = new PHPMailer;
 if (isset($_SESSION['usuario']) and ($_SESSION['nivel']==2 or $_SESSION['nivel']==1)  ) { 
 include "../config/config.php";  
 
-$query_config=mysqli_query($con,"select * from configuracion ");
-$result_config=mysqli_fetch_array($query_config);
-
 date_default_timezone_set('America/Santiago');
 $date = date('Y-m-d H:m:s', time());
 $fecha_actual = date("Y-m-d");
@@ -30,39 +27,39 @@ function make_date(){
 
 $fecha =make_date();
 
-$giro=$_POST['giro'];
-$descripcion_giro=$_POST['descripcion'];
-$nombre_fantasia=$_POST['nombre_fantasia'];
-$razon_social=$_POST['razon_social'];
-$rut=$_POST['rut'];
-$direccion_empresa=$_POST['direccion_empresa'];
-$region_com=$_POST['region_com'];
-$comuna_com=$_POST['comuna_com'];
+$giro=$_POST['giro'] ?? '';
+$descripcion_giro=$_POST['descripcion_giro'] ?? '';
+$nombre_fantasia=$_POST['nombre_fantasia'] ?? '';
+$razon_social=$_POST['razon_social'] ?? '';
+$rut=$_POST['rut'] ?? '';
+$direccion_empresa=$_POST['direccion_empresa'] ?? '';
+$region_com=$_POST['region_com'] ?? '';
+$comuna_com=$_POST['comuna_com'] ?? '';
 
-$administrador=$_POST['administrador'];
-$fono=$_POST['fono'];
-$email=$_POST['email'];
-$email2=$_POST['email2'];
+$administrador=$_POST['administrador']  ?? '';
+$fono=$_POST['fono'] ?? '';
+$email=$_POST['email'] ?? '';
+$email2=$_POST['email2'] ?? '';
 
-$representante=$_POST['representante'];
-$rut_rep=$_POST['rut_rep'];
-$direccion_rep=$_POST['direccion_rep'];
-$region_rep=$_POST['region_rep'];
-$comuna_rep=$_POST['comuna_rep'];
-$estado_civil=$_POST['estado_civil'];
+$representante=$_POST['representante'] ?? '';
+$rut_rep=$_POST['rut_rep'] ?? '';
+$direccion_rep=$_POST['direccion_rep'] ?? '';
+$region_rep=$_POST['region_rep'] ?? '';
+$comuna_rep=$_POST['comuna_rep'] ?? '';
+$estado_civil=$_POST['estado_civil'] ?? '';
 
-$plan=$_POST['plan'];
+$plan=$_POST['plan'] ?? '';
 
 $doc=serialize($_POST['doc_contratista']);
 $total_doc=count($_POST['doc_contratista']);
 
-$id_contratista=$_POST['id_contratista'];
+$id_contratista=$_POST['id_contratista'] ?? '';
 $nivel_user=3;
 
 if ($_SESSION['nivel']==1)  {  
     $mandante=$_POST['mandante'];
 } else {    
-    $sql_mandante=mysqli_query($con,"select * from mandantes  where rut_empresa='".$_SESSION['usuario']."'  ");
+    $sql_mandante=mysqli_query($con,"select * from mandantes where rut_empresa='".$_SESSION['usuario']."'  ");
     $result=mysqli_fetch_array($sql_mandante);
     $mandante=$result['id_mandante'];
     $nom_mandante=$result['razon_social'];
@@ -70,102 +67,88 @@ if ($_SESSION['nivel']==1)  {
 
 if ($_POST['contratistas']=="crear") { 
 
-    // validar que rut existe
-    $query_u=mysqli_query($con,"select * from users where usuario='$rut'");
-    $result_u=mysqli_fetch_array($query_u);
-
     $query_contratista=mysqli_query($con,"select * from contratistas where rut='$rut' ");
     $result_contratista=mysqli_fetch_array($query_contratista);  
-     
-    if (empty($result_u['nivel'])) {
-            
-            // validar que contratista existe
                      
-            // si rut no existe en contratistas
-            if ($result_contratista['rut']=='') {
+    
+    // si rut no existe en contratistas es una nueva
+    if ($result_contratista['rut']=='') {
                        
-                    $consulta="insert into contratistas (giro,descripcion_giro,nombre_fantasia,razon_social,rut,direccion_empresa,dir_comercial_region,dir_comercial_comuna,administrador,fono,email,representante,rut_rep,direccion_rep,region_rep,comuna_rep,creado_contratista,mandante,estado_civil,usuario) 
-                    values ('$giro','$descripcion_giro','$nombre_fantasia','$razon_social','$rut','$direccion_empresa','$region_com','$comuna_com','$administrador','$fono','$email','$representante','$rut_rep','$direccion_rep','$region_rep','$comuna_rep','$fecha_actual','$mandante','$estado_civil','".$_SESSION['usuario']."') ";    
-                
-                    $sql_contratista=mysqli_query($con,$consulta); 
-                    
-                    if ($sql_contratista) {
-                                                
-                        $query_idcontratista =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'contratistas' ");
-                        $result_idcontratista= mysqli_fetch_array($query_idcontratista); 
-                        $idcontratista=$result_idcontratista['AUTO_INCREMENT']-1;
+        $consulta="insert into contratistas (giro,descripcion_giro,nombre_fantasia,razon_social,rut,direccion_empresa,dir_comercial_region,dir_comercial_comuna,administrador,fono,email,representante,rut_rep,direccion_rep,region_rep,comuna_rep,creado_contratista,mandante,estado_civil,usuario) 
+        values ('$giro','$descripcion_giro','$nombre_fantasia','$razon_social','$rut','$direccion_empresa','$region_com','$comuna_com','$administrador','$fono','$email','$representante','$rut_rep','$direccion_rep','$region_rep','$comuna_rep','$fecha_actual','$mandante','$estado_civil','".$_SESSION['usuario']."') ";                    
+        $sql_contratista=mysqli_query($con,$consulta);   
+
+        if ($sql_contratista) {                                                
+            $query_idcontratista =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'contratistas' ");
+            $result_idcontratista= mysqli_fetch_array($query_idcontratista); 
+            $idcontratista=$result_idcontratista['AUTO_INCREMENT']-1;
           
-                        # agregar en tabla contratistas mandantes
-                        $query_mc=mysqli_query($con,"insert into contratistas_mandantes (contratista,mandante,creado,doc_contratista,cant_doc) values ('$idcontratista','$mandante','$fecha_actual','$doc','$total_doc') ");
+            # agregar en tabla contratistas mandantes
+            $query_mc=mysqli_query($con,"insert into contratistas_mandantes (contratista,mandante,creado,doc_contratista,cant_doc) values ('$idcontratista','$mandante','$fecha_actual','$doc','$total_doc') ");
                         
-                        $fecha_fin_plan=date("Y-m-d",strtotime($fecha_actual."+ 30 days"));
+            $fecha_fin_plan=date("Y-m-d",strtotime($fecha_actual."+ 30 days"));
                         
-                        $query=mysqli_query($con,"select * from mandantes where id_mandante='$mandante' ");
-                        $result=mysqli_fetch_array($query);
-                        $nom_mandante=$result['razon_social'];
+            $query=mysqli_query($con,"select * from mandantes where id_mandante='$mandante' ");
+            $result=mysqli_fetch_array($query);
+            $nom_mandante=$result['razon_social'];
                       
-                        # contratista con documentos
-                        if ($total_doc!=0) {   
+            # contratista con documentos
+            if ($total_doc!=0) {   
+                # documentos solicitados
+                foreach ($_POST['doc_contratista'] as $row) {
+                    $query_d=mysqli_query($con,"select * from doc_contratistas where id_cdoc='$row'  ");
+                    $result_d=mysqli_fetch_array($query_d);
 
-                                # documentos solicitados
-                                foreach ($_POST['doc_contratista'] as $row) {
-                                   $query_d=mysqli_query($con,"select * from doc_contratistas where id_cdoc='$row'  ");
-                                   $result_d=mysqli_fetch_array($query_d);
-
-                                   #notificacion que falta perfiles solo lectura
-                                   $item='Gestion Documentos de Contratista';
-                                   $nivel=2;
-                                   $usuario=$_SESSION['usuario'];
-                                   $envia=$mandante;
-                                   $recibe=$idcontratista;
-                                   $tipo=1;
-                                   $url="gestion_documentos.php";
-                                   $accion="Gestionar documentos";
-                                   $mensaje="El Mandante <b>$nom_mandante</b> ha solicitado la gestion del documento <b>".$result_d['documento']."</b> para la acreditacion de la Contratista."; 
-                                   $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contratista,documento) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$result_d['documento']."','$mandante','$idcontratista','".$result_d['documento']."') ");
+                    #notificacion que falta perfiles solo lectura
+                    $item='Gestion Documentos de Contratista';
+                    $nivel=2;
+                    $usuario=$_SESSION['usuario'];
+                    $envia=$mandante;
+                    $recibe=$idcontratista;
+                    $tipo=1;
+                    $url="gestion_documentos.php";
+                    $accion="Gestionar documentos";
+                    $mensaje="El Mandante <b>$nom_mandante</b> ha solicitado la gestion del documento <b>".$result_d['documento']."</b> para la acreditacion de la Contratista."; 
+                    $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contratista,documento,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$result_d['documento']."','$mandante','$idcontratista','".$result_d['documento']."','$rut') ");
 
                                 }
-                                
-                               
-                       # contratista sin documentos
-                       } else {
-                              
-                              # intregas observaciones
-                              $sql_ob=mysqli_query($con,"insert into doc_observaciones (contratista,mandante,verificados,estado,creado,user,control,user) values ('$idcontratista','".$_SESSION['mandante']."','0','1','$date','$user','0','".$_SESSION['usuario']."')   ");  
+            # contratista sin documentos
+            } else {                              
+                # intregas observaciones
+                $sql_ob=mysqli_query($con,"insert into doc_observaciones (contratista,mandante,verificados,estado,creado,user,control,user) values ('$idcontratista','".$_SESSION['mandante']."','0','1','$date','$user','0','".$_SESSION['usuario']."')   ");  
                          
-                              # actualizar acreditada contratista
-                              $update_c=mysqli_query($con,"update contratistas set acreditada=1 where id_contratista='$idcontratista' ");
+                # actualizar acreditada contratista
+                $update_c=mysqli_query($con,"update contratistas set acreditada=1 where id_contratista='$idcontratista' ");
               
-                              # actualizar contratistas_mandantes  
-                              $update_c=mysqli_query($con,"update contratistas_mandantes set acreditada=1 where contratista='$idcontratista' and mandante='".$_SESSION['mandante']."' ");
-                         
-                             
-                       }         
+                # actualizar contratistas_mandantes  
+                $update_c=mysqli_query($con,"update contratistas_mandantes set acreditada=1 where contratista='$idcontratista' and mandante='".$_SESSION['mandante']."' ");                                                     
+            }         
                                                                                 
-                        // crear tabla de pagos
-                        $query_pagos=mysqli_query($con,"insert into pagos (idcontratista,fecha_inicio_plan,fecha_fin_plan,fecha_creado,usuario) values ('$idcontratista','$fecha_actual','$fecha_fin_plan','$fecha_actual','".$_SESSION['usuario']."') ");
-                        $query_control_pagos=mysqli_query($con,"insert into control_pagos (idcontratista,fecha_creado,usuario) values ('$idcontratista','$fecha_actual','".$_SESSION['usuario']."') ");
+            // crear tabla de pagos
+            $query_pagos=mysqli_query($con,"insert into pagos (idcontratista,fecha_inicio_plan,fecha_fin_plan,fecha_creado,usuario) values ('$idcontratista','$fecha_actual','$fecha_fin_plan','$fecha_actual','".$_SESSION['usuario']."') ");
+            $query_control_pagos=mysqli_query($con,"insert into control_pagos (idcontratista,fecha_creado,usuario) values ('$idcontratista','$fecha_actual','".$_SESSION['usuario']."') ");
                           
-                            $Caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-                            $ca = strlen($Caracteres);
-                            $ca--;
-                            $Hash = '';
-                            for ($x = 1; $x <= 25; $x++) {
-                                $Posicao = rand(0, $ca);
-                                $Hash .= substr($Caracteres, $Posicao, 1);
-                            }
+            $Caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            $ca = strlen($Caracteres);
+            $ca--;
+            $Hash = '';
+            for ($x = 1; $x <= 60; $x++) {
+                $Posicao = rand(0, $ca);
+                $Hash .= substr($Caracteres, $Posicao, 1);
+            }
                             
-                            $sql_user=mysqli_query($con,"insert into users (nombre_user,usuario,email_user, nivel,creado_user) values ('$administrador','$rut','$email','$nivel_user','$date')  "  );
+            $sql_user=mysqli_query($con,"insert into users (nombre_user,usuario,email_user, nivel,creado_user) values ('$administrador','$rut','$email','$nivel_user','$date')  "  );
                             
-                            $resultado2 =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'users' ");
-                            $auto= mysqli_fetch_array($resultado2); 
-                            $id=$auto['AUTO_INCREMENT']-1; 
+            $resultado2 =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'users' ");
+            $auto= mysqli_fetch_array($resultado2); 
+            $id=$auto['AUTO_INCREMENT']-1; 
                          
-                            $sql_token=mysqli_query($con,"insert into tokens (id_user,token,creado_token) values ('$id','$Hash','$date')  "  );
+            $sql_token=mysqli_query($con,"insert into tokens (id_user,token,creado_token) values ('$id','$Hash','$date')  "  );
                             
-                            $correo=$email;
-                            $nombre=$administrador;
-                            $cuerpo='
+            ### correo para contratistas que no se han creados
+            $correo=$email;
+            $nombre=$administrador;
+            $cuerpo='
                             <!DOCTYPE html">
                             <html>
                             <head>
@@ -455,7 +438,7 @@ if ($_POST['contratistas']=="crear") {
                                             <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                                 <tr>
                                                     <td class="alert alert-good">
-                                                        <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                                        <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -475,7 +458,7 @@ if ($_POST['contratistas']=="crear") {
                                                             </tr>
                                                             <tr>
                                                                 <td class="content-block">
-                                                                    <a style="background: #010829;color:#ffffff;padding: 2%" href="https://'.$result_config['url'].'/validation.php?token='.$Hash.'" class="btn"><code>Activar Cuenta</code></a>
+                                                                    <a style="background: #010829;color:#ffffff;padding: 2%" href="https://facilcontrol.cl/validation.php?token='.$Hash.'" class="btn"><code>Activar Cuenta</code></a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -558,74 +541,65 @@ if ($_POST['contratistas']=="crear") {
                          
                          
                             echo 0; 
-                     } else {
-                        echo 1;
-                     }   
-          // si rut ya existe en contratistas          }
-          } else {
-              // si mandante ya tiene contratista agregada 
-              if ($result_contratista['mandante']==$mandante) {
-                echo 5;
-              } else {
-                echo 4;
-              }  
-          }    
-    } else {
-        if ($result_u['nivel']==2 or $result_u['nivel']==4) {
-            echo 6;    
         } else {
-           
-            $query_u=mysqli_query($con,"update contratistas set multiple=1 where rut='".$rut."' ");
-            if ($query_u) {
+            echo 1;
+        }   
 
-                # agregar en tabla contratistas mandantes
-                $query_mc=mysqli_query($con,"insert into contratistas_mandantes (contratista,mandante,creado,doc_contratista,cant_doc) values ('".$result_contratista['id_contratista']."','$mandante','$fecha_actual','$doc','$total_doc') ");
-               
+    #si rut ya existe en contratistas          
+    } else {
                 
-                $query=mysqli_query($con,"select * from mandantes where id_mandante='$mandante' ");
-                $result=mysqli_fetch_array($query);
-                $nom_mandante=$result['razon_social'];
-              
-                # contratista con documentos
-                if ($total_doc!=0) {   
+                $consulta="insert into contratistas (giro,descripcion_giro,nombre_fantasia,razon_social,rut,direccion_empresa,dir_comercial_region,dir_comercial_comuna,administrador,fono,email,representante,rut_rep,direccion_rep,region_rep,comuna_rep,creado_contratista,mandante,estado_civil,usuario) 
+                values ('$giro','$descripcion_giro','$nombre_fantasia','$razon_social','$rut','$direccion_empresa','$region_com','$comuna_com','$administrador','$fono','$email','$representante','$rut_rep','$direccion_rep','$region_rep','$comuna_rep','$fecha_actual','$mandante','$estado_civil','".$_SESSION['usuario']."') ";                    
+                $sql_contratista=mysqli_query($con,$consulta);                   
+                
+                if ($sql_contratista) {                    
+                    $query_idcontratista =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'contratistas' ");
+                    $result_idcontratista= mysqli_fetch_array($query_idcontratista); 
+                    $idcontratista=$result_idcontratista['AUTO_INCREMENT']-1;
+                    
+                    #contratista multiple: con mas de un mandante
+                    $query_u=mysqli_query($con,"update contratistas set multiple=1 where rut='".$rut."' ");
 
+                    # agregar en tabla contratistas mandantes
+                    $query_mc=mysqli_query($con,"insert into contratistas_mandantes (contratista,mandante,creado,doc_contratista,cant_doc) values ('$idcontratista','$mandante','$fecha_actual','$doc','$total_doc') ");
+                                
+                    $query=mysqli_query($con,"select * from mandantes where id_mandante='$mandante' ");
+                    $result=mysqli_fetch_array($query);
+                    $nom_mandante=$result['razon_social'];
+                            
+                    # contratista con documentos
+                    if ($total_doc!=0) {   
                         # documentos solicitados
                         foreach ($_POST['doc_contratista'] as $row) {
-                           $query_d=mysqli_query($con,"select * from doc_contratistas where id_cdoc='$row'  ");
-                           $result_d=mysqli_fetch_array($query_d);
+                            $query_d=mysqli_query($con,"select * from doc_contratistas where id_cdoc='$row'  ");
+                            $result_d=mysqli_fetch_array($query_d);
 
-                           #notificacion que falta perfiles solo lectura
-                           $item='Gestion Documentos de Contratista';
-                           $nivel=2;
-                           $usuario=$_SESSION['usuario'];
-                           $envia=$mandante;
-                           $recibe=$result_contratista['id_contratista'];
-                           $tipo=1;
-                           $url="gestion_documentos.php";
-                           $accion="Gestionar documentos";
-                           $mensaje="El Mandante <b>$nom_mandante</b> ha solicitado la gestion del documento <b>".$result_d['documento']."</b> para la acreditacion de la Contratista."; 
-                           $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contratista,documento) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$result_d['documento']."','$mandante','".$result_contratista['id_contratista']."','".$result_d['documento']."') ");
+                            #notificacion que falta perfiles solo lectura
+                            $item='Gestion Documentos de Contratista';
+                            $nivel=2;
+                            $usuario=$_SESSION['usuario'];
+                            $envia=$mandante;
+                            $recibe=$idcontratista;
+                            $tipo=1;
+                            $url="gestion_documentos.php";
+                            $accion="Gestionar documentos";
+                            $mensaje="El Mandante <b>$nom_mandante</b> ha solicitado la gestion del documento <b>".$result_d['documento']."</b> para la acreditacion de la Contratista."; 
+                            $query_notificaciones=mysqli_query($con,"insert into notificaciones (item,nivel,envia,recibe,mensaje,accion,fecha,usuario,url,tipo,control,mandante,contratista,documento,rut) values ('$item','$nivel','$envia','$recibe','$mensaje','$accion','$date','$usuario','$url','$tipo','".$result_d['documento']."','$mandante','$idcontratista','".$result_d['documento']."','$rut') ");
 
-                        }
-                        
-                       
-               # contratista sin documentos
-               } else {
-                      
-                      # intregas observaciones
-                      $sql_ob=mysqli_query($con,"insert into doc_observaciones (contratista,mandante,verificados,estado,creado,user,control,user) values ('$idcontratista','".$_SESSION['mandante']."','0','1','$date','$user','0','".$_SESSION['usuario']."')   ");  
-                 
-                      # actualizar acreditada contratista
-                      $update_c=mysqli_query($con,"update contratistas set acreditada=1 where id_contratista='$idcontratista' ");
-      
-                      # actualizar contratistas_mandantes  
-                      $update_c=mysqli_query($con,"update contratistas_mandantes set acreditada=1 where contratista='$idcontratista' and mandante='".$_SESSION['mandante']."' ");
-                 
-                     
-               }         
-                                                                        
-                
+                                        }
+                    # contratista sin documentos
+                    } else {                              
+                        # intregas observaciones
+                        $sql_ob=mysqli_query($con,"insert into doc_observaciones (contratista,mandante,verificados,estado,creado,user,control,user) values ('$idcontratista','".$_SESSION['mandante']."','0','1','$date','$user','0','".$_SESSION['usuario']."')   ");  
+                                
+                        # actualizar acreditada contratista
+                        $update_c=mysqli_query($con,"update contratistas set acreditada=1 where id_contratista='$idcontratista' ");
                     
+                        # actualizar contratistas_mandantes  
+                        $update_c=mysqli_query($con,"update contratistas_mandantes set acreditada=1 where contratista='$idcontratista' and mandante='".$_SESSION['mandante']."' ");                                                     
+                    }
+
+
                     $correo=$email;
                     $nombre=$administrador;
                     $cuerpo='
@@ -918,7 +892,7 @@ if ($_POST['contratistas']=="crear") {
                                     <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                         <tr>
                                             <td class="alert alert-good">
-                                                <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                                <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
                                             </td>
                                         </tr>
                                         <tr>
@@ -938,7 +912,7 @@ if ($_POST['contratistas']=="crear") {
                                                             <tr>
                                                                 <td class="content-block">
                                                                     Ingrese a la plataforma <b>FacilControl</b> por medio del siguiente enlace:<br/>
-                                                                    <a href="https://'.$result_config['url'].'/admin.php">Inicio de FacionControl</a>
+                                                                    <a href="https://facilcontrol.cl/admin.php">Inicio de FacionControl</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -1021,18 +995,15 @@ if ($_POST['contratistas']=="crear") {
                  
                  
                     echo 0; 
-             } else {
-                echo 1;
-             }   
-        }
 
-    }     
+                } else {
+                    echo 1;
+                }                 
+    }    
 }   
                 
                 
-if ($_POST['contratistas']=="actualizar") {
-           
-                
+    if ($_POST['contratistas']=="actualizar") {
             $query_documentos=mysqli_query($con,"select doc_contratista from contratistas_mandantes where contratista='".$_SESSION['contratista']."' and mandante='".$_SESSION['mandante']."' ");
             $result_documentos=mysqli_fetch_array($query_documentos);
             $documentos_actual=unserialize($result_documentos['doc_contratista']);
@@ -1060,7 +1031,7 @@ if ($_POST['contratistas']=="actualizar") {
             } else {
                 echo 3;
             }
-}
+    }
 
 } else { 
 

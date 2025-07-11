@@ -1,7 +1,7 @@
 <?php
 /**
- * @author helimir lopez
- * @copyright 2023
+ * @author lolkittens
+ * @copyright 2021
  */
 
 include "../config/config.php"; 
@@ -15,9 +15,6 @@ use PHPMailer\PHPMailer\Exception;
                             
 $mail = new PHPMailer; 
 
-$query_config=mysqli_query($con,"select * from configuracion ");
-$result_config=mysqli_fetch_array($query_config);
-
 date_default_timezone_set('America/Santiago');
 $date = date('Y-m-d H:m:s', time());
 
@@ -28,23 +25,22 @@ function make_date(){
 
 $fecha =make_date();
 
-$giro=$_POST['giro'] ?? '';
-$descripcion=$_POST['descripcion'] ?? '';
-$nombre_fantasia=$_POST['nombre_fantasia'] ?? '';
-$razon_social=$_POST['razon_social'] ?? '';
-$rut_empresa=$_POST['rut_empresa']  ?? '';
-$rut_representante=$_POST['rut_representante'] ?? '';
-$representante=$_POST['representante'] ?? '';
-$region_com=$_POST['region_com'] ?? '';
-$comuna_com=$_POST['comuna_com'] ?? '';
-$region_mat==$_POST['region_mat'] ?? '';
-$comuna_mat=$_POST['comuna_mat'] ?? '';
-$administrador=$_POST['administrador'] ?? '';
-$fono=$_POST['fono'] ?? '';
-$email=$_POST['email'] ?? '';
-$direccion=$_POST['direccion_emp'] ?? '';
-$dualidad=$_POST['dualidad'] ?? '';
-#$dualidad=isset($_POST['dualidad']) ? $_POST['dualidad']: '';
+$giro=isset($_POST['giro']) ? $_POST['giro']: '';$_POST['giro'];
+$descripcion=isset($_POST['descripcion']) ? $_POST['descripcion']: '';
+$nombre_fantasia=isset($_POST['nombre_fantasia']) ? $_POST['nombre_fantasia']: '';
+$razon_social=isset($_POST['razon_social']) ? $_POST['razon_social']: '';
+$rut_empresa=isset($_POST['rut_empresa']) ? $_POST['rut_empresa']: '';
+$rut_representante=isset($_POST['rut_representante']) ? $_POST['rut_representante']: '';
+$representante=isset($_POST['representante']) ? $_POST['representante']: '';
+$region_com=isset($_POST['region_com']) ? $_POST['region_com']: '';
+$comuna_com=isset($_POST['comuna_com']) ? $_POST['comuna_com']: '';
+$region_mat==isset($_POST['region_mat']) ? $_POST['region_mat']: '';
+$comuna_mat=isset($_POST['comuna_mat']) ? $_POST['comuna_mat']: '';
+$administrador=isset($_POST['administrador']) ? $_POST['administrador']: '';
+$fono=isset($_POST['fono']) ? $_POST['fono']: '';
+$email=isset($_POST['email']) ? $_POST['email']: '';
+$direccion=isset($_POST['direccion_emp']) ? $_POST['direccion_emp']: '';
+$dualidad=isset($_POST['dualidad']) ? $_POST['dualidad']: '';
 
 $sql=mysqli_query($con,"select * from users where usuario='$rut_empresa' and nivel='2' ");
 $result=mysqli_num_rows($sql);
@@ -55,16 +51,17 @@ if ($result>0) {
 } else {
     $sql_mandantes=mysqli_query($con,"insert into mandantes (giro,descripcion_giro,nombre_fantasia,razon_social,rut_empresa,rut_representante,representante_legal,dir_comercial_region,dir_comercial_comuna,dir_matriz_region,dir_matriz_comuna,administrador,fono,email,creado_mandante,direccion,usuario) values ('$giro','$descripcion','$nombre_fantasia','$razon_social','$rut_empresa','$rut_representante','$representante','$region_com','$comuna_com','$region_mat','$comuna_mat','$administrador','$fono','$email','$date','$direccion','".$_SESSION['usuario']."') ");
    
+    $resultado =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'mandantes' ");
+    $auto= mysqli_fetch_array($resultado); 
+    $id_mandante=$auto['AUTO_INCREMENT']-1; 
+
     if ($sql_mandantes) {
-   
-            $resultado =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'mandantes' ");
-            $auto= mysqli_fetch_array($resultado); 
-            $id_mandante=$auto['AUTO_INCREMENT']-1; 
+        
         
             if ($_POST['dualidad']==1) {
-                mysqli_query($con,"insert into contratistas (giro,nombre_fantasia,razon_social,rut,rut_rep,representante,direccion_empresa,dir_comercial_region,dir_comercial_comuna,administrador,fono,email,creado_contratista,mandante,descripcion_giro,dualidad,acreditada,usuario,multiple) values ('$giro','$nombre_fantasia','$razon_social','$rut_empresa','$rut_representante','$representante','$direccion','$region_com','$comuna_com','$administrador','$fono','$email', '$date','$id_mandante','$descripcion','1','1','".$_SESSION['usuario']."','1') ");
+                mysqli_query($con,"insert into contratistas (giro,nombre_fantasia,razon_social,rut,rut_rep,representante,direccion_empresa,dir_comercial_region,dir_comercial_comuna,administrador,fono,email,creado_contratista,mandante,descripcion_giro,dualidad,acreditada,usuario) values ('$giro','$nombre_fantasia','$razon_social','$rut_empresa','$rut_representante','$representante','$direccion','$region_com','$comuna_com','$administrador','$fono','$email', '$date','$id_mandante','$descripcion','1','1','".$_SESSION['usuario']."') ");
 
-                $resultado_c =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'contratistas' ");           
+                $resultado_c =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'contratistas' ");           
                 $auto_c= mysqli_fetch_array($resultado_c); 
                 $id_contratista=$auto_c['AUTO_INCREMENT']-1;
 
@@ -92,14 +89,14 @@ if ($result>0) {
             $ca = strlen($Caracteres);
             $ca--;
             $Hash = '';
-            for ($x = 1; $x <= 25; $x++) {
+            for ($x = 1; $x <= 60; $x++) {
                 $Posicao = rand(0, $ca);
                 $Hash .= substr($Caracteres, $Posicao, 1);
             }
             
             $sql_user=mysqli_query($con,"insert into users (nombre_user,usuario,email_user, nivel,creado_user) values ('$administrador','$rut_empresa','$email','$valor','$date')  "  );
             
-            $resultado2 =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '".$result_config['bd_name']."' AND TABLE_NAME = 'users' ");
+            $resultado2 =mysqli_query($con,"SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'clubicl_facilcontrol' AND TABLE_NAME = 'users' ");
             $auto= mysqli_fetch_array($resultado2); 
             $id=$auto['AUTO_INCREMENT']-1; 
          
@@ -400,7 +397,7 @@ if ($result>0) {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                        <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
                                         </td>
                                     </tr>
                                     <tr>
@@ -418,7 +415,7 @@ if ($result>0) {
                                                 </tr>
                                                 <tr>
                                                     <td class="content-block">
-                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://'.$result_config['url'].'/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
+                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://facilcontrol.cl/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -497,12 +494,7 @@ if ($result>0) {
                 $mail->addCC('arielguzmansardy@gmail.com');
                                            
                 $mail->IsHTML(true);
-                if ($mail->send()) {
-                    echo 0;
-                } else {
-                    mysqli_query($con,"UPDATE mandantes ser correo='1' where id_mandante='$id_mandante' ");
-                    echo 3;
-                }
+                $mail->send();
                 
             } else {
                 $cuerpo='
@@ -795,7 +787,7 @@ if ($result>0) {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0">
                                     <tr>
                                         <td class="alert alert-good">
-                                            <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                            <img style="height: 100px ;" src="https://facilcontrol.cl/add/logo_fc.png" >
                                         </td>
                                     </tr>
                                     <tr>
@@ -808,12 +800,12 @@ if ($result>0) {
                                                 </tr>
                                                 <tr>
                                                     <td class="content-block">
-                                                        Por favor validar el siguiente correo para activar su ingreso a la plataforma .
+                                                        Por favor validar el siguiente correo para activar su ingreso a la plataforma.
                                                     </td>
                                                 </tr>
                                                 <tr>
                                                     <td class="content-block">
-                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://'.$result_config['url'].'/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
+                                                        <a style="background: #010829;color:#ffffff;padding: 2%" href="https://facilcontrol.cl/validation.php?token='.$Hash.'" class="btn">Validar Cuenta</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -889,17 +881,12 @@ if ($result>0) {
                 //CONFIGURACI�N DE RECEPTORES
                 $mail->addAddress($correo,$nombre);
                 $mail->addCC('helimirlopez@gmail.com');
-                #$mail->addCC('arielguzmansardy@gmail.com');
+                $mail->addCC('arielguzmansardy@gmail.com');
                                            
                 $mail->IsHTML(true);
-                if ($mail->send()) {
-                    echo 0;
-                } else {
-                    mysqli_query($con,"UPDATE mandantes ser correo='1' where id_mandante='$id_mandante' ");
-                    echo 3;
-                }
+                $mail->send();  
             }
-            
+            echo 0;
      } else {
          echo 1;
     }

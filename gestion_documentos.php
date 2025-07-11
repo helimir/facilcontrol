@@ -3,6 +3,7 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 
 if (isset($_SESSION['usuario'])) { 
@@ -56,7 +57,6 @@ $result_obs_m=mysqli_fetch_array($query_obs_m);
 if(isset($result_obs_m['verificados'])){
     $list_veri_m=unserialize( $result_obs_m['verificados']);
 }
-#$list_veri_m=unserialize( $result_obs_m['verificados'])
 
 ?>
 
@@ -552,7 +552,7 @@ if(isset($result_obs_m['verificados'])){
        
             <div style="" class="row wrapper white-bg ">
                 <div class="col-lg-10">
-                    <h2 style="color: #010829;font-weight: bold;">DOCUMENTOS DE LA CONTRATISTA <?php   ?></h2>
+                    <h2 style="color: #010829;font-weight: bold;">DOCUMENTOS DE LA CONTRATISTA <?  ?></h2>
                     <label class="label label-warning encabezado">Mandante: <?php echo $razon_social ?></label>     
                 </div>
             </div>
@@ -671,7 +671,7 @@ if(isset($result_obs_m['verificados'])){
                             
                                         <div style="margin-top: 3%;" class="row">  
                                             <div class="table table-responsive">
-                                                <table style="width: 100%;" class="footable table" data-page-size="25" data-filter="#filter">
+                                                <table style="width: 100%;" class="footable table" data-page-size="100" data-filter="#filter">
                                                     <thead >
                                                         <tr>
                                                             <th style="width: 3%;"></th>
@@ -686,7 +686,6 @@ if(isset($result_obs_m['verificados'])){
                                                         </tr>
                                                     </thead>
                                                     
-                                                    <tbody>
                                                     
                                                     <?php          
                                                     
@@ -700,7 +699,6 @@ if(isset($result_obs_m['verificados'])){
                                                         $estado=array();
                                                         
                                                         foreach ($doc as $row) {
-                                                            $cont_doc=$cont_doc+1; 
                                                             $sql=mysqli_query($con,"select * from doc_contratistas where id_cdoc='$row' ");  
                                                             $result=mysqli_fetch_array($sql);  
                                                             
@@ -924,8 +922,8 @@ if(isset($result_obs_m['verificados'])){
                                                             # si archivo no existe                                                              
                                                             } else  {             
                                                                                                                        
-                                                                    # no enviado
-                                                                    $estado='1';  ?>
+                                                                 # no enviado
+                                                                $estado='1';  ?>
                                                                 <input type="hidden" id="estado_doc<?php echo $i ?>" value="1">            
                                                                 <tbody>     
                                                                     <tr>
@@ -943,7 +941,7 @@ if(isset($result_obs_m['verificados'])){
                                                                         <!-- adjuntar -->
                                                                         <td id="div_seleccionar2<?php echo $i ?>"  style="text-align:center;">
                                                                                 <div class="fileinput fileinput-new" data-provides="fileinput">
-                                                                                    <span id="span_seleccionar<?php echo $i ?>" style="background: #282828;color: #000;border:##282828;color:#fff;width:100%" class="btn btn-default btn-file "><span class="fileinput-new">Archivo</span>
+                                                                                    <span id="span_seleccionar<?php echo $i ?>" style="background: #282828;color: #000;border:##282828;color:#fff;width:100%;font-size:12px" class="btn btn-default btn-file "><span class="fileinput-new">Archivo</span>
                                                                                     <span class="fileinput-exists">Cambiar</span><input id="carga_doc<?php echo $i ?>" name="carga_doc[]" type="file" accept="application/pdf"   /></span>
                                                                                     <span class="fileinput-filename"></span>                                                             
                                                                                         <a title="Quitar" href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none"> <i class="fa fa-times-circle" aria-hidden="true"></i></a>
@@ -992,7 +990,8 @@ if(isset($result_obs_m['verificados'])){
                                                     echo '<input type="hidden" name="cadena_doc[]" id="cadena_doc'.$i.'" value="'.$result['id_cdoc'].'" />';
                                                     echo '<input type="hidden" name="comentario[]" id="comentario'.$i.'" value="'.$result_com['id_dcom'].'" />';
                                                     echo '<input type="hidden" name="estado[]" id="estado'.$i.'" value="'.$estado.'" />';
-                                                    $i++;} ?>  
+                                                    #$i++;
+                                                    } ?>  
                                                 
                                                 <?php } ?> 
                                                 
@@ -1002,10 +1001,10 @@ if(isset($result_obs_m['verificados'])){
                                         
                                         <hr>
                                
-                                                    <div style="" class="form-group row">
-                                                        <div class="col-lg- col-sm-12 col-xs-12">
+                                                    <div  class="form-group row">
+                                                        <div style="text-align:right" class="col-lg-12 col-sm-12 col-xs-12">
                                                             <?php if ($result_contratista['acreditada']!=1) { ?>
-                                                                        <button style="font-size:14px" title="Cargar Archivo" class="btn-success btn btn-md btn-block font-bold" type="button" onclick="cargar_doc_contratista(<?php echo $i ?>)" >PROCESAR DOCUMENTOS SOLICITADOS <?php  ?></button>
+                                                                        <button style="font-size:14px;" title="Cargar Archivo" class="btn-success btn btn-md btn-block font-bold col-4" type="button" onclick="cargar_doc_contratista(<?php echo $i ?>)" >PROCESAR DOCUMENTOS SOLICITADOS <?php  ?></button>
                                                             <?php } ?>
                                                         </div>
                                                     </div>

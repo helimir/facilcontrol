@@ -3,6 +3,7 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 
 if (isset($_SESSION['usuario']) and  $_SESSION['nivel']==1 ) { 
@@ -152,7 +153,7 @@ $aql_mandantes=mysqli_query($con,"select r.Region, c.Comuna, m.* from mandantes 
                                         <!--<a  class="btn btn-sm btn-success btn-submenu" href="list_contratistas.php" class="" type="button"><i class="fa fa-chevron-right" aria-hidden="true"></i><b>Reporte de Contratistas</b></a>-->
                                     </div>
                                 </div> 
-                                <?php include('resumen.php') ?>                                
+                                <?php #include('resumen.php') ?>                                
                                 <hr>
                             
                          <input class="form-control form-control-sm m-b-xs" id="filter" placeholder="Buscar un Mandante">

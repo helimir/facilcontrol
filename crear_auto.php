@@ -1,4 +1,5 @@
 <?php
+include('sesion_manager.php');
 session_start();
 if (isset($_SESSION['usuario']) and ($_SESSION['nivel']==3)  ) { 
 include('config/config.php');

@@ -1,9 +1,9 @@
 <?php
-
 /**
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
 session_start();
 
 if (isset($_SESSION['usuario'])) { 
@@ -204,7 +204,7 @@ if ($_SESSION['nivel']==1)  {
                         <div id="modal_ver_doc" class="modal fade modal_ver_doc" tabindex="-1" role="dialog" aria-hidden="true">
                             <div class="modal-dialog modal-md modal-dialog-centered">
                                 <div class="modal-content " style="width: 130%;">
-                                  <div style="background: #010829;color: #FFFFFF;" class="modal-header">
+                                  <div style="background:#e9eafb;color: #282828" class="modal-header">
                                       <h3 class="modal-title" id="exampleModalLabel">Documentos del Perfil</h3>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                       <span aria-hidden="true">&times;</span>

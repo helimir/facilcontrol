@@ -147,7 +147,7 @@ function comparar() {
 
 </head>
 
-<body class="gray-bg">
+<body style="background: #010829" >
 
     <div class="passwordBox animated fadeInDown">
         <div class="row">

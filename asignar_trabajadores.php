@@ -3,6 +3,8 @@
  * @author helimirlopez
  * @copyright 2021
  */
+include('sesion_manager.php');
+
 session_start();
 if (isset($_SESSION['usuario']) ) { 
 include('config/config.php');
@@ -195,12 +197,11 @@ $result_contrato=mysqli_fetch_array($query_contrato);
         <div id="page-wrapper" class="gray-bg">
        
            <?php include('superior.php') ?> 
-        
-       
-            <div style="" class="row wrapper white-bg ">
+            <div style="" class="row wrapper white-bg pt-2 ">
                 <div class="col-lg-10">
-                    <h2 style="color: #010829;font-weight: bold;">Asignar Trabajadores al Contrato: [<?php echo $result_contrato['nombre_contrato'] ?>]</h2>
+                    <h2 style="color: #292929;font-weight: bold;font-size:18px">Asignar Trabajadores al Contrato: [<?php echo $result_contrato['nombre_contrato'] ?>]</h2>
                     <label class="label label-warning encabezado">Mandante: <?php echo $razon_social ?></label>
+                    
                 </div>
             </div>
       
@@ -227,7 +228,7 @@ $result_contrato=mysqli_fetch_array($query_contrato);
                                   <div class="col-lg-12">
                                      <form  method="post" id="frmAsignar">
                                         <table class="table ">
-                                           <thead class="cabecera_tabla">
+                                           <thead class="">
                                             <tr>
                                                 <th style="width:2%;border-right:1px #fff solid">#</th>
                                                 <th style="width:30%;border-right:1px #fff solid">Trabajador</th>
@@ -293,7 +294,7 @@ $result_contrato=mysqli_fetch_array($query_contrato);
                                                          <?php if ($num==1) { ?>
                                                                     <td colspan="4"><h3>No hay trabajadores para asignar a este contrato</h3></td>
                                                             <?php } else { ?>                                                                     
-                                                                    <td style="border:1px #c0c0c0 solid;border-radius:5px;text-align:right;" colspan="4"><button style="padding:1% 0%"  class="btn btn-success btn-sm col-lg-5 col-sm-12"  onclick="asignar_contrato(<?php echo $num ?>)" ><strong> ASIGNAR SELECCI&Oacute;N</strong></button></td>
+                                                                    <td style="text-align:right;" colspan="4"><button style="padding:1% 0%"  class="btn btn-success btn-sm col-lg-5 col-sm-12"  onclick="asignar_contrato(<?php echo $num ?>)" ><strong> ASIGNAR SELECCI&Oacute;N</strong></button></td>
                                                             <?php }  ?>
                                                          </tr>       
                                             

@@ -1,4 +1,5 @@
 <?php
+include('sesion_manager.php');
 session_start();
 if (isset($_SESSION['usuario']) and ($_SESSION['nivel']==2 or $_SESSION['nivel']==1)  ) { 
 
@@ -48,10 +49,13 @@ $year=date('Y');
      <!-- Sweet Alert -->
     <link href="css\plugins\sweetalert\sweetalert.css" rel="stylesheet">
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 <script src="js\jquery-3.1.1.min.js"></script>
 <script>
 
+    
 
     $(document).ready(function(){
 				
@@ -72,109 +76,7 @@ $year=date('Y');
 						});            
 					});
 				})
-    });
-    
-    function agregar(usuario,opcion) {
-    swal({
-        title: "¿Desea Agregar como Contratista?",
-        //text: "Desea Agregarla",
-        type: "success",
-        showCancelButton: true,
-        confirmButtonColor: "#1AB394",
-        confirmButtonText: "Si, Agregar!",
-        cancelButtonText: "No, Agregar!",
-        closeOnConfirm: false,
-        closeOnCancel: false },
-        function (isConfirm) {
-            if (isConfirm) { 
-                $.ajax({
-                    method: "POST",
-                    url: "add/agregar_dual.php",
-                    data: 'rut='+usuario+'&opcion='+opcion,
-                    success: function(data) {
-                        //alert(data)
-                        if (data==0) {
-                            swal({
-                                title: "Contratista Agregada",
-                                //text: "You clicked the button!",
-                                type: "success"
-                          });
-                          setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);                            
-                        } else {
-                            swal("Disculpe Error de Sistema", "Vuelva a intentar", "error");
-                        }
-                    },
-                });     
-            } else {
-                swal("Cancelado", "Accion Cancelada", "error");
-            }
-        }); 
-}
 
-
-    function existerut(rut) {
-    
-      //alert(rut);
-      if (rut!='') {   
-       
-        $.ajax({
- 			method: "POST",
-            url: "verificar_rut.php",
-            data: 'rut='+rut,
- 			success: function(data) {
-                 //alert(data);
-                 if (data==0) {
- 			        swal({
-                        title: "Contratista Existe en FacilControl. ¿Desea Agregar?",
-                        //text: "Desea Agregarla",
-                        type: "success",
-                        showCancelButton: true,
-                        confirmButtonColor: "#1AB394",
-                        confirmButtonText: "Si, Agregar!",
-                        cancelButtonText: "No, Agregar!",
-                        closeOnConfirm: false,
-                        closeOnCancel: false },
-                        function (isConfirm) {
-                            if (isConfirm) {
-                                $.ajax({
-                         			method: "POST",
-                                    url: "sesion_contratistas_agregar.php",
-                                    data: 'rut='+rut,
-                         			success: function(data) {
-                                      window.location.href='agregar_contratista.php';
-                                    },
-                                });     
-                                //swal("Confirmado!", "El Mandante ha sido deshabilitado.", "success");                                
-                                //setTimeout(window.location.href='list_contratos.php', 3000);
-                        } else {
-                           swal("Cancelado", "Accion Cancelada", "error");
-                          
-                        }
-                    });                    
- 			    } 
-                  if (data==1) {
- 			        document.getElementById("rut").value = "";
- 			        swal({
-                        title: "Contratista esta en Listado",
-                        //text: "You clicked the button!",
-                        type: "warning"
-                    });
-                    
- 			    }
-            }                                                            
-        });
-     } else {
-        swal({          
-            title: "RUT no puede estar vacío",
-            //text: "You clicked the button!",
-            type: "error"
-        });
-     }   
-        
-    }
-
-    $(document).ready(function(){
-				
                 $("#region").change(function () {				
 					$("#region option:selected").each(function () {
 						IdRegion = $(this).val();
@@ -286,11 +188,140 @@ $year=date('Y');
                                 }
                             });
                 }); 
-                
-    });  
-  
+    });
+    
+    function agregar(usuario,opcion) {
+    swal({
+        title: "¿Desea Agregar como Contratista?",
+        //text: "Desea Agregarla",
+        type: "success",
+        showCancelButton: true,
+        confirmButtonColor: "#1AB394",
+        confirmButtonText: "Si, Agregar!",
+        cancelButtonText: "No, Agregar!",
+        closeOnConfirm: false,
+        closeOnCancel: false },
+        function (isConfirm) {
+            if (isConfirm) { 
+                $.ajax({
+                    method: "POST",
+                    url: "add/agregar_dual.php",
+                    data: 'rut='+usuario+'&opcion='+opcion,
+                    success: function(data) {
+                        //alert(data)
+                        if (data==0) {
+                            swal({
+                                title: "Contratista Agregada",
+                                //text: "You clicked the button!",
+                                type: "success"
+                          });
+                          setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);                            
+                        } else {
+                            swal("Disculpe Error de Sistema", "Vuelva a intentar", "error");
+                        }
+                    },
+                });     
+            } else {
+                swal("Cancelado", "Accion Cancelada", "error");
+            }
+        }); 
+}
 
 
+    function existerut(rut) {
+    var valido=$('#valido').val();
+    //alert(valido)
+      if (rut!='') {   
+        if (valido==2) {
+            $.ajax({
+                method: "POST",
+                url: "verificar_rut.php",
+                data: 'rut='+rut,
+                success: function(data) {
+                    //alert(data);
+                    if (data==0) {
+                        Swal.fire({
+                            title: "Contratista Existe en FacilControl. ¿Desea Agregar Información?",
+                            //text: "You won't be able to revert this!",
+                            icon: "success",
+                            showCancelButton: true,
+                            confirmButtonColor: "#3085d6",
+                            cancelButtonColor: "#d33",
+                            confirmButtonText: "Si, Agregar"
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                $.ajax({
+                                        method: "POST",
+                                        url: "add/agregar_contratista.php",
+                                        data: 'rut='+rut,
+                                        dataType: 'json',
+                                        success: function(data) {
+                                            //alert(data)
+                                            if(data.error) {
+                                                alert(data.error);
+                                            } else {
+                                                // Auto-llenado MÁGICO (los IDs deben coincidir con los nombres de campo)
+                                                $.each(data, function(key, value) {
+                                                    $('#' + key).val(value);
+                                                });
+                                                $('#email2').val(data.email);
+                                                $("#lbl_razon_social").html("<span style='' ></span>");
+                                                $("#help_rep").html("<span></span>");
+                                            }
+                                        },
+                                    });                                 
+                            }
+                        });
+                                        
+                    } 
+                    //si esta la base de datos del mandante
+                    if (data==1) {
+                        document.getElementById("rut").value = "";
+                        Swal.fire({
+                            title: "Contratista esta es su lista",
+                            icon: "warning",
+                            draggable: true
+                        });                    
+                    }
+                    //si es solo mandante
+                    if (data==2) {
+                        document.getElementById("rut").value = "";
+                        Swal.fire({
+                            title: "RUT es un Mandante",
+                            icon: "error",
+                            draggable: true
+                        });                    
+                    }
+                    //si es solo mandante
+                    if (data==3) {
+                        document.getElementById("rut").value = "";
+                        Swal.fire({
+                            title: "RUT es SuperAdmin",
+                            icon: "error",
+                            draggable: true
+                        });                    
+                    }
+                }                                                            
+            });
+        } else {
+            document.getElementById("rut").value = "";
+ 			Swal.fire({
+                title: "RUT es Inválido",
+                icon: "error",
+                draggable: true
+            });                    
+        }
+     } else {
+        Swal.fire({
+            title: "Rut no puede estar vacío",
+            icon: "error",
+            draggable: true
+        });
+     }   
+        
+    }
+
+    
 // Permitir solo numeros y letra K en el imput
 function isNumber(evt) {
   let charCode = evt.which;
@@ -302,8 +333,7 @@ function isNumber(evt) {
   return true;
 }
 
-function checkRut(rut) {
-  
+function checkRut(rut) {  
 
   if (rut.value.length <= 1) {
       $("#help").html("<span style='color:#1AB394;' >Ingrese un RUT v&aacute;lido</span>");
@@ -355,10 +385,13 @@ function checkRut(rut) {
 
   // Validar que el Cuerpo coincide con su DÃ­gito Verificador
   if (dvEsperado != dv) {    
-    $("#help").html("<span style='color:#ED5565;font-weight:bold' >Rut Inv&aacute;lido</span>");
+    $("#help").html("<span style='color: #ED5565;font-weight:bold' >Rut Inv&aacute;lido</span>");
+    $('#valido').val(1);
     return validacion=false;
+    
   } else {
-    $("#help").html("<span style='color:#1C84C6;font-weight:bold' >Rut V&aacute;lido</span>");
+    $("#help").html("<span style='color: #1C84C6;font-weight:bold' >Rut V&aacute;lido</span>");
+    $('#valido').val(2);
     return validacion=true;
   }
 }
@@ -744,6 +777,7 @@ function validar_rep(rut_rep) {
                                     <div class="col-12">
                                         <label style="font-weight:bold;color: #000000" class="col-lg-2 col-sm-12 col-xs-12 col-form-label">RUT </small></label>                                    
                                         <input class="form-control bordes col-lg-2 col-md-2 col-sm-12 col-xs-12" maxlength="12" name="rut" id="rut" type="text" placeholder="xxxxxxxx-x" onkeypress="return isNumber(event)" onBlur="existerut(this.value)" oninput="checkRut(this)" required=""  />
+                                        <input type="hidden" id="valido" name="valido" >
                                         <span style="color: #1AB394;"  id="help" class="form-label" >ingrese un RUT v&aacute;lido</span>
                                     </div>
                                 </div>
@@ -770,7 +804,7 @@ function validar_rep(rut_rep) {
                                 <div class="form-group row">
                                     <div class="col-12">
                                         <label style="font-weight:bold;color: #000000" class="col-sm-2 col-form-label ">Descripci&oacute;n del giro </small></label>
-                                        <input name="descripcion" id="descripcion" type="text" class="form-control bordes col-lg-12 col-md-12 col-sm-12 col-xs-12" onBlur="validar(3)"  />
+                                        <input name="descripcion_giro" id="descripcion_giro" type="text" class="form-control bordes col-lg-12 col-md-12 col-sm-12 col-xs-12" onBlur="validar(3)"  />
                                         <span style="color: #FF0000;font-weight: bold;" id="lbl_descripcion" class="form-label" ></span>
                                     </div>
                                 </div>
@@ -968,7 +1002,7 @@ function validar_rep(rut_rep) {
                                 <div class="hr-line-dashed"></div>
                                 <div class="form-group row">
                                     <div style="font-size:16px" class="col-12 col-sm-offset-2">
-                                        <button class="btn btn-success btn-md col-lg-4 col-sm-12 col-xs-12" type="button" name="contratistas" value="crea" onclick="crear_contratista(<?php echo $i ?>)">CREAR CONTRATISTA</button>
+                                        <button class="btn btn-success btn-md col-lg-4 col-sm-12 col-xs-12" type="button" name="contratistas" value="crear" onclick="crear_contratista(<?php echo $i ?>)">CREAR CONTRATISTA</button>
                                     </div>
                                 </div>
                             </form>
@@ -1077,316 +1111,275 @@ function validar_rep(rut_rep) {
             
       //validar rut
       if (rut=="") {
-         swal({
-            title: "RUT Requerido",
-            text: "Debe completar información",
-            type: "warning"
-         });
+            Swal.fire({
+                        title: "Rut. Requerido",
+                        icon: "warning",
+                        draggable: true
+            });                    
         // validar razon social
       } else {
             if (razon_social=="") {
-               swal({
-                    title: "Razon Social Requerido",
-                    text: "Debe completar información",
-                    type: "warning"
-                });
+                    Swal.fire({
+                        title: "Razón Social. Requerido",
+                        icon: "warning",
+                        draggable: true
+                    });                    
                 $("#lbl_razon_social").html("<span style='' >* Razon Social requerido</span>");
             } else {
                 if (giro=="") {
-                       swal({
-                        title: "Giro Social Requerido",
-                        text: "Debe completar información",
-                        type: "warning"
-                    });
+                       Swal.fire({
+                        title: "Giro Social. Requerido",
+                        icon: "warning",
+                        draggable: true
+                    });                    
                     $("#lbl_giro_social").html("<span style='' >* Giro Social requerido</span>");
                 } else {
                   if (descripcion==""){
-                         swal({
-                            title: "Descripcion Requerido",
-                            text: "Debe completar información",
-                            type: "warning"
-                        });
+                         Swal.fire({
+                            title: "Descripcion Giro. Requerido",
+                            icon: "warning",
+                            draggable: true
+                        });                    
                         
                   } else {
                     if (nombre_fantasia=="") {
-                        swal({
-                            title: "Nombre Fantasia Requerido",
-                            text: "Debe completar información",
-                            type: "warning"
-                        });
+                        Swal.fire({
+                            title: "Nombre de Fantasia. Requerido",
+                            icon: "warning",
+                            draggable: true
+                        });                    
                     } else {
                         if (direccion_empresa=="") {
-                             swal({
-                                title: "Dirección Empresa Requerido",
-                                text: "Debe completar información",
-                                type: "warning"
-                            });
+                             Swal.fire({
+                                title: "Dirección Empresa. Requerido",
+                                icon: "warning",
+                                draggable: true
+                            });                    
                         } else {
                             if (region_com=="0") {
-                                swal({
-                                    title: "Region Empresa Requerido",
-                                    text: "Debe completar información",
-                                    type: "warning"
-                                }); 
+                                Swal.fire({
+                                    title: "Región Empresa. Requerido",
+                                    icon: "warning",
+                                    draggable: true
+                                });                     
                             } else {
                                 if (comuna_com=="0") {
-                                    swal({
-                                        title: "Comuna Empresa Requerido",
-                                        text: "Debe completar información",
-                                        type: "warning"
-                                    });
+                                    Swal.fire({
+                                        title: "Comuna Empresa. Requerido",
+                                        icon: "warning",
+                                        draggable: true
+                                    });                    
                                 } else {
                                     if (administrador=="") {
-                                        swal({
-                                            title: "Administrador Sistema Requerido",
-                                            text: "Debe completar información",
-                                            type: "warning"
-                                        });
+                                        Swal.fire({
+                                            title: "Administrador Sistema. Requerido",
+                                            icon: "warning",
+                                            draggable: true
+                                        });                    
                                     } else {
                                         if (fono=="") {
-                                            swal({
-                                                title: "Fono Administrador Sistema Requerido",
-                                                text: "Debe completar información",
-                                                type: "warning"
-                                            });
+                                            Swal.fire({
+                                                title: "Fono Adminitrador Sistema. Requerido",
+                                                icon: "warning",
+                                                draggable: true
+                                            });                    
                                         } else {
                                             if (email=="") {
-                                                swal({
-                                                    title: "Email Administrador Sistema Requerido",
-                                                    text: "Debe completar información",
-                                                    type: "warning"
-                                                });  
+                                                Swal.fire({
+                                                    title: "Email Administrador. Requerido",
+                                                    icon: "warning",
+                                                    draggable: true
+                                                });                    
                                             } else {
                                                 if (email2=="") {
-                                                    swal({
-                                                        title: "Confirmar Email Requerido",
-                                                        text: "Debe completar información",
-                                                        type: "warning"
-                                                    });  
+                                                    Swal.fire({
+                                                        title: "Confirmar Email Administrador Requerido. Requerido",
+                                                        icon: "warning",
+                                                        draggable: true
+                                                    });                    
                                                 } else {
                                                     if (email!=email2) {
-                                                        swal({
-                                                            title: "Email deben ser iguales",
-                                                            //text: "Debe completar información",
-                                                            type: "warning"
-                                                        }); 
+                                                        Swal.fire({
+                                                            title: "Emails Administrador Sistema deben ser iguales",
+                                                            icon: "warning",
+                                                            draggable: true
+                                                        });                    
                                                     } else {
                                                         if (representante=="") {
-                                                            swal({
-                                                                title: "Representante Requerido",
-                                                                text: "Debe completar información",
-                                                                type: "warning"
-                                                            });   
+                                                            Swal.fire({
+                                                                title: "Representante. Requerido",
+                                                                icon: "warning",
+                                                                draggable: true
+                                                            });                    
                                                         } else {
                                                             if (rut_rep=="") {
-                                                                   swal({
-                                                                     title: "RUT Representante Requerido",
-                                                                     text: "Debe completar información",
-                                                                     type: "warning"
-                                                                   });     
+                                                                   Swal.fire({
+                                                                        title: "Rut Representante. Requerido",
+                                                                        icon: "warning",
+                                                                        draggable: true
+                                                                    });                    
                                                             } else {
                                                                 if (direccion_rep=="") {
-                                                                     swal({
-                                                                         title: "Direccion Representante Requerido",
-                                                                         text: "Debe completar información",
-                                                                         type: "warning"
-                                                                     });
+                                                                     Swal.fire({
+                                                                        title: "Direccion Representante. Requerido",
+                                                                        icon: "warning",
+                                                                        draggable: true
+                                                                    });                    
                                                                 } else {
                                                                     if (region_rep=="0") {
-                                                                          swal({
-                                                                             title: "Region Representante Requerido",
-                                                                             text: "Debe completar información",
-                                                                             type: "warning"
-                                                                          });
+                                                                          Swal.fire({
+                                                                                title: "Región Representante. Requerido",
+                                                                                icon: "warning",
+                                                                                draggable: true
+                                                                            });                    
                                                                     } else {
                                                                         if (comuna_rep=="0") {
-                                                                             swal({
-                                                                                 title: "Comuna Representante Requerido",
-                                                                                 text: "Debe completar información",
-                                                                                 type: "warning"
-                                                                              });
+                                                                             Swal.fire({
+                                                                                title: "Comuna Representante. Requerido",
+                                                                                icon: "warning",
+                                                                                draggable: true
+                                                                            });                    
                                                                         } else {
                                                                             
                                                                             // sino hay documentos seleccionados
                                                                             if (contador==0) {
-                                                                                
-                                                                                // confirmacion si crea sin documentos
-                                                                                swal({
-                                                                                    title: "Ningun documento de Contratista seleccionado . ¿Desea Agregar?",
-                                                                                    //text: "Desea Agregarla",
-                                                                                    type: "success",
+
+                                                                                Swal.fire({
+                                                                                    title: "Ningun documento de Contratista seleccionado . ¿Crear Contratista?",
+                                                                                    //text: "You won't be able to revert this!",
+                                                                                    icon: "warning",
                                                                                     showCancelButton: true,
-                                                                                    confirmButtonColor: "#1AB394",
-                                                                                    confirmButtonText: "Si, Agregar!",
-                                                                                    cancelButtonText: "No, Agregar!",
-                                                                                    closeOnConfirm: false,
-                                                                                    closeOnCancel: false },
-                                                                                    function (isConfirm) {
-                                                                                        if (isConfirm) {
-                                                                                              var valores=$('#frmContratistas').serialize();
-                                                                                              $.ajax({
-                                                                                    			method: "POST",
-                                                                                                url: "add/add_contratistas.php",
-                                                                                                data: valores,
-                                                                                                beforeSend: function(){
-                                                                                                    $('#modal_cargar').modal('show');						
-                                                                                    			},
-                                                                                    			success: function(data) {			  
-                                                                                                 if (data==0) {
-                                                                                                     //alert(data);                     ; 
-                                                                                                     swal({
-                                                                                                            title: "Contratista Creada",
-                                                                                                            //text: "You clicked the button!",
-                                                                                                            type: "success"
-                                                                                                     });
-                                                                                                     setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);
-                                                                                                     //window.location.href='list_contratistas_mandantes.php';
-                                                                                    			  } else {
-                                                                                    			      if (data==1) {  
-                                                                                                        swal("Cancelado", "Contratista No Creada. Vuelva a Intentar.", "error");
-                                                                                                      } 
-                                                                                                      if (data==2) {
-                                                                                                        swal({
-                                                                                                            title: "Contratista Actualizada",
-                                                                                                            //text: "You clicked the button!",
-                                                                                                            type: "success"
-                                                                                                        });
-                                                                                                      }
-                                                                                                      if (data==3) {
-                                                                                                        swal("Contratista No Actualizada", "Vuelva a Intentar.", "error");
-                                                                                                      }
-                                                                                                      
-                                                                                                      if (data==4) {
-                                                                                                         swal({
-                                                                                                            title: "Contratista existe en FacilControl",
-                                                                                                            text: "Desea agrega a sus registros",
-                                                                                                            type: "success",
-                                                                                                            showCancelButton: true,
-                                                                                                            confirmButtonColor: "#DD6B55",
-                                                                                                            confirmButtonText: "Yes, agregar",
-                                                                                                            cancelButtonText: "No, agregar",
-                                                                                                            closeOnConfirm: false,
-                                                                                                            closeOnCancel: false },
-                                                                                                        function (isConfirm) {
-                                                                                                            // confirma agregar contratista
-                                                                                                            if (isConfirm) {
-                                                                                                                swal("Agregar Contratista", "Funcion no activa)", "success");                                                                                            
-                                                                                                            } else {
-                                                                                                                swal("Cancelado", "Contratista no agregada)", "error");
-                                                                                                            }
-                                                                                                        });
-                                                                                                      }
-                                                                                                       
-                                                                                                      if (data==5) {
-                                                                                                        swal({
-                                                                                                            title: "Ya tiene esta Contratista agregada",
-                                                                                                            //text: "You clicked the button!",
-                                                                                                            type: "warning"
-                                                                                                        });
-                                                                                                      }    
-                                                                                                      
-                                                                                                      if (data==6) {
-                                                                                                        swal({
-                                                                                                            title: "RUT existe como Mandante",
-                                                                                                            text: "Agregue como Contratista",
-                                                                                                            type: "warning"
-                                                                                                        });
-                                                                                                      } 
-                                                                                                       
-                                                                                    			  }
-                                                                                    			},
-                                                                                                complete:function(data){
-                                                                                                     $('#modal_cargar').modal('hide');
-                                                                                                }, 
-                                                                                                error: function(data){
-                                                                                                }                
-                                                                                           });
-                                                                                    } else {
-                                                                                       swal("Cancelado", "Accion Cancelada", "error");
-                                                                                      
-                                                                                    }
-                                                                                });    
-                                                                            
-                                                                        // con documentos seleccionados              
-                                                                        } else {
-                                                                                              var valores=$('#frmContratistas').serialize();
-                                                                                              $.ajax({
-                                                                                    			method: "POST",
-                                                                                                url: "add/add_contratistas.php",
-                                                                                                data: valores,
-                                                                                                beforeSend: function(){
-                                                                                                    $('#modal_cargar').modal('show');						
-                                                                                    			},
-                                                                                    			success: function(data) {	
+                                                                                    confirmButtonColor: "#3085d6",
+                                                                                    cancelButtonColor: "#d33",
+                                                                                    confirmButtonText: "Si, crearla"
+                                                                                }).then((result) => {
+                                                                                if (result.isConfirmed) {
+                                                                                    var valores=$('#frmContratistas').serialize();
+                                                                                    $.ajax({
+                                                                                        method: "POST",
+                                                                                        url: "add/add_contratistas.php",
+                                                                                        data: valores,
+                                                                                        beforeSend: function(){
+                                                                                            $('#modal_cargar').modal('show');						
+                                                                                    	},
+                                                                                    	success: function(data) {			  
+                                                                                            if (data==0) {
+                                                                                                //alert(data);   
+                                                                                                $('#modal_cargar').modal('hide');                  ; 
+                                                                                                Swal.fire({
+                                                                                                    title: "Contratista Creada",
+                                                                                                    icon: "success",
+                                                                                                    draggable: true
+                                                                                                });
+                                                                                                setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);
+                                                                                    		} else {
+                                                                                    			if (data==1) {  
                                                                                                     $('#modal_cargar').modal('hide');
-                                                                                                    if (data==0) {                                                                                                     
-                                                                                                        swal({
-                                                                                                                title: "Contratista Creada",
-                                                                                                                //text: "You clicked the button!",
-                                                                                                                type: "success"
-                                                                                                        });
-                                                                                                        setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);
-                                                                                                        //window.location.href='list_contratistas_mandantes.php';
-                                                                                                    } else {
-                                                                                                            if (data==1) {  
-                                                                                                                swal("Cancelado", "Contratista No Creada. Vuelva a Intentar.", "error");
-                                                                                                            } 
-                                                                                                            if (data==2) {
-                                                                                                                swal({
-                                                                                                                    title: "Contratista Actualizada",
-                                                                                                                    //text: "You clicked the button!",
-                                                                                                                    type: "success"
-                                                                                                                });
-                                                                                                            }
-                                                                                                            if (data==3) {
-                                                                                                                swal("Contratista No Actualizada", "Vuelva a Intentar.", "error");
-                                                                                                            }
-                                                                                                            
-                                                                                                            if (data==4) {
-                                                                                                                swal({
-                                                                                                                    title: "Contratista existe en FacilControl",
-                                                                                                                    text: "Desea agrega a sus registros",
-                                                                                                                    type: "success",
-                                                                                                                    showCancelButton: true,
-                                                                                                                    confirmButtonColor: "#DD6B55",
-                                                                                                                    confirmButtonText: "Yes, agregar",
-                                                                                                                    cancelButtonText: "No, agregar",
-                                                                                                                    closeOnConfirm: false,
-                                                                                                                    closeOnCancel: false },
-                                                                                                                function (isConfirm) {
-                                                                                                                    // confirma agregar contratista
-                                                                                                                    if (isConfirm) {
-                                                                                                                        swal("Agregar Contratista", "Funcion no activa)", "success");                                                                                            
-                                                                                                                    } else {
-                                                                                                                        swal("Cancelado", "Contratista no agregada)", "error");
-                                                                                                                    }
-                                                                                                                });
-                                                                                                            }
-                                                                                                            
-                                                                                                            if (data==5) {
-                                                                                                                swal({
-                                                                                                                    title: "Ya tiene esta Contratista agregada",
-                                                                                                                    //text: "You clicked the button!",
-                                                                                                                    type: "warning"
-                                                                                                                });
-                                                                                                            } 
-                                                                                                            
-                                                                                                            if (data==6) {
-                                                                                                                swal({
-                                                                                                                    title: "RUT existe como Mandante",
-                                                                                                                    text: "Agregue como Contratista",
-                                                                                                                    type: "warning"
-                                                                                                                });
-                                                                                                            }                                                                                                        
-                                                                                    			    }
-                                                                                    			},
-                                                                                                complete:function(data){
-                                                                                                     $('#modal_cargar').modal('hide');
-                                                                                                }, 
-                                                                                                error: function(data){
-                                                                                                }                
-                                                                                           });
-                                                                        }
+                                                                                                    Swal.fire({
+                                                                                                        title: "Error de Sistema! Vuelva a intenar",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                } 
+                                                                                                if (data==2) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Contratista Actualizada",
+                                                                                                        icon: "success",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                }
+                                                                                                if (data==3) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Error de Sistema! Vuelva a intentar",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                }     
+                                                                                                if (data==6) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Rut Existe como Mandante",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                } 
+                                                                                                       
+                                                                                    		}
+                                                                                    	},
+                                                                                        complete:function(data){
+                                                                                            $('#modal_cargar').modal('hide');
+                                                                                        }, 
+                                                                                        error: function(data){
+                                                                                        }                
+                                                                                    });
+                                                                                }
+                                                                                }); 
+                                                                            
+                                                                            // con documentos seleccionados              
+                                                                            } else {
+                                                                                var valores=$('#frmContratistas').serialize();
+                                                                                    $.ajax({
+                                                                                        method: "POST",
+                                                                                        url: "add/add_contratistas.php",
+                                                                                        data: valores,
+                                                                                        beforeSend: function(){
+                                                                                            $('#modal_cargar').modal('show');						
+                                                                                    	},
+                                                                                    	success: function(data) {			  
+                                                                                            if (data==0) {
+                                                                                                //alert(data);   
+                                                                                                $('#modal_cargar').modal('hide');                  ; 
+                                                                                                Swal.fire({
+                                                                                                    title: "Contratista Creada",
+                                                                                                    icon: "success",
+                                                                                                    draggable: true
+                                                                                                });
+                                                                                                setTimeout(window.location.href='list_contratistas_mandantes.php', 3000);
+                                                                                    		} else {
+                                                                                    			if (data==1) {  
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Error de Sistema! Vuelva a intenar",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                } 
+                                                                                                if (data==2) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Contratista Actualizada",
+                                                                                                        icon: "success",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                }
+                                                                                                if (data==3) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Error de Sistema! Vuelva a intentar",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                }     
+                                                                                                if (data==6) {
+                                                                                                    $('#modal_cargar').modal('hide');
+                                                                                                    Swal.fire({
+                                                                                                        title: "Rut Existe como Mandante",
+                                                                                                        icon: "error",
+                                                                                                        draggable: true
+                                                                                                    });
+                                                                                                } 
+                                                                                                       
+                                                                                    		}
+                                                                                    	},
+                                                                                        complete:function(data){
+                                                                                            $('#modal_cargar').modal('hide');
+                                                                                        }, 
+                                                                                        error: function(data){
+                                                                                        }                
+                                                                                    });
+                                                                            }
                                                                       }  
                                                                     }
                                                                 }

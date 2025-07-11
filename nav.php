@@ -1,6 +1,11 @@
 <?php 
  session_start();
  $url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual=$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
 ?>
 
 <style>

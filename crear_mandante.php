@@ -3,6 +3,7 @@
  * @author helimirlopez
  * @copyright 20224
  */
+include('sesion_manager.php');
 session_start();
 if (isset($_SESSION['usuario']))  {    
 include('config/config.php');
@@ -295,7 +296,7 @@ function validar_rep(rut_rep) {
                                         <!--<a  class="btn btn-sm btn-success btn-submenu" href="list_contratistas.php" class="" type="button"><i class="fa fa-chevron-right" aria-hidden="true"></i><b>Reporte de Contratistas</b></a>-->
                                     </div>
                               </div>                              
-                              <?php include('resumen.php') ?>
+                              <?php #include('resumen.php') ?>
                               <hr>
                               <form  method="post" id="frmMandantes">
 
