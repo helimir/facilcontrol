@@ -8,7 +8,7 @@ include "../config/config.php";
 
 $url_host=$_SERVER['HTTP_HOST'];
  if ($url_host=='localhost') {
-    $url_actual=$url_host.'/facilcontrol/';
+    $url_actual='http://'.$url_host.'/facilcontrol/';
  } else {
     $url_actual='https://'.$url_host.'/';
  }
@@ -498,7 +498,7 @@ if ($result>0) {
                 //CONFIGURACI�N DE RECEPTORES
                 $mail->addAddress($correo,$nombre);
                 $mail->addCC('helimirlopez@gmail.com');
-                $mail->addCC('arielguzmansardy@gmail.com');
+                #$mail->addCC('arielguzmansardy@gmail.com');
                                            
                 $mail->IsHTML(true);
                 $mail->send();
@@ -888,7 +888,7 @@ if ($result>0) {
                 //CONFIGURACI�N DE RECEPTORES
                 $mail->addAddress($correo,$nombre);
                 $mail->addCC('helimirlopez@gmail.com');
-                $mail->addCC('arielguzmansardy@gmail.com');
+                #$mail->addCC('arielguzmansardy@gmail.com');
                                            
                 $mail->IsHTML(true);
                 $mail->send();  

@@ -1,4 +1,12 @@
 <?php
+
+$url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual=$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
+
 include "config/config.php"; 
 date_default_timezone_set('America/Santiago');
 $date = date('Y-m-d H:m:s', time());
@@ -157,7 +165,7 @@ function comparar() {
                     <div>
                     <h1 style="color: #010829;" class="logo-name"><img style="height:90%;width:90%" src="assets/img/logo_2.png"></i></h1>
                     </div>
-                    <h2 style="" class="font-bold text-center">Validar Usuario <?  ?></h2>                    
+                    <h2 style="" class="font-bold text-center">Validar Usuario <?php #echo $url_actual  ?></h2>                    
                     
                    
                     <div class="row">

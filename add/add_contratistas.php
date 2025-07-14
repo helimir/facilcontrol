@@ -7,7 +7,7 @@ session_start();
 
 $url_host=$_SERVER['HTTP_HOST'];
  if ($url_host=='localhost') {
-    $url_actual=$url_host.'/facilcontrol/';
+    $url_actual='http://'.$url_host.'/facilcontrol/';
  } else {
     $url_actual='https://'.$url_host.'/';
  }
@@ -542,7 +542,7 @@ if ($_POST['contratistas']=="crear") {
                             
                             //CONFIGURACI�N DE RECEPTORES
                             $mail->addAddress($correo,$nombre);
-                            $mail->addCC('arielguzmansardy@gmail.com');
+                            #$mail->addCC('arielguzmansardy@gmail.com');
                                                        
                             $mail->IsHTML(true);
                             $mail->send();  
@@ -996,7 +996,7 @@ if ($_POST['contratistas']=="crear") {
                     
                     //CONFIGURACI�N DE RECEPTORES
                     $mail->addAddress($correo,$nombre);
-                    $mail->addCC('arielguzmansardy@gmail.com');
+                    #$mail->addCC('arielguzmansardy@gmail.com');
                                                
                     $mail->IsHTML(true);
                     $mail->send();  

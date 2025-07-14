@@ -5,18 +5,12 @@ include "config/config.php";
 setlocale(LC_MONETARY,"es_CL");
 $year=date('Y');
 
-$query_config=mysqli_query($con,"select * from configuracion ");
-$result_config=mysqli_fetch_array($query_config);
-
-
-if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
-    $url = "https://";
-} else {
-    $url = "http://";
-}
-#echo $url_actual = $url . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-$url_actual = $url . $_SERVER['HTTP_HOST'].'/';
-
+$url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual=$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
 
 ?>
 
@@ -361,7 +355,7 @@ function togglePassword() {
 
                 <a href="#"><small>Olvide Contrase&ntilde;a</small></a>
             <p style="color: #282828;" class="m-t"> <small>Proyecto &copy; <?PHP echo $year ?></small> </p>
-            <input type="hidden" name="url" id="url" value="<?php echo $result_config['url'] ?>">
+            <input type="hidden" name="url" id="url" value="<?php echo  $url_actual ?>">
         </div>
     </div>
 
@@ -553,7 +547,9 @@ function togglePassword() {
                                 url: "cambiar_dual.php",
                                 data:'valor='+valor+'&rut='+rut,
                                 success: function(data){
-                                    window.location.href="https://"+url+"/tareas.php";
+                                    //alert(data)
+                                    //window.location.href="https://"+url+"/tareas.php";
+                                    window.location.href="tareas.php";
                                 }
                             });
                         }

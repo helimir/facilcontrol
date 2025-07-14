@@ -1,6 +1,13 @@
 <?php
 include "../config/config.php"; 
 
+$url_host=$_SERVER['HTTP_HOST'];
+ if ($url_host=='localhost') {
+    $url_actual='http://'.$url_host.'/facilcontrol/';
+ } else {
+    $url_actual='https://'.$url_host.'/';
+ }
+
 require_once('../PHPMailer/Exception.php');
 require_once('../PHPMailer/PHPMailer.php');
 require_once('../PHPMailer/SMTP.php');
@@ -333,7 +340,7 @@ if ($sql_user) {
                                 <table class="main" width="100%" cellpadding="0" cellspacing="0"> 
                                     <tr>
                                         <td class="alert alert-good">
-                                             <img style="height: 100px ;" src="https://'.$result_config['url'].'/add/logo_fc.png" >
+                                             <img style="height: 100px ;" src="'.$url_actual.'add/logo_fc.png" >
                                         </td>
                                     </tr>
                                     <tr>

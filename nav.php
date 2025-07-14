@@ -348,7 +348,7 @@
                         </div>                        
                     <?php } else { ?>
                         <div style="width:100%">
-                            <img alt="image" class="" style="width:100%;background:#fff;border-radius:5px;padding-top:-4%" src="img/contratista/<?php echo $contratista ?>/logo_<?php echo $contratista ?>.png">
+                            <img alt="image" class="" style="width:100%;background:#fff;border-radius:5px;padding-top:-4%" src="img\contratista\<?php echo $contratista ?>\logo_<?php echo $contratista ?>.png">
                         </div>
                     <?php } ?>
                     
